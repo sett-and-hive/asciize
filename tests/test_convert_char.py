@@ -95,7 +95,7 @@ def test_char_converson():
         ["ķ", "k"],
         ["ļ", "l"],
         # ["ł", "l"],
-        ["ĺ", "l"], 
+        ["ĺ", "l"],
         ["ņ", "n"],
         ["ń", "n"],
         ["ñ", "n"],
@@ -112,7 +112,6 @@ def test_char_converson():
         ["ż", "z"],
         # Synthetic Czech name
         ["Oldřich Špaček", "Oldrich Spacek"],
-
     ]
 
     for input, expected in tests:

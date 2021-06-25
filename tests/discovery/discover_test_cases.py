@@ -1,4 +1,4 @@
-"""Use Faker to generate text (names) to visually test asciize to 
+"""Use Faker to generate text (names) to visually test asciize to
 discover missing test cases.
 
 This is an exploratory testing tool.

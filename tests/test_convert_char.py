@@ -118,6 +118,3 @@ def test_char_converson():
         print(f"In /{input}/ Test /{expected}/")
         output = character_coversion(input)
         assert output == expected
-
-
-# How does NNPES treat O'Brien? https://npiregistry.cms.hhs.gov/ O'BRIEN - no worries

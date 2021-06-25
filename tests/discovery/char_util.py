@@ -1,7 +1,7 @@
 """char_util"""
 # TIL https://pypi.org/project/Unidecode/ but it is GPL2 and is mapping tables
 # http://semplicewebsites.com/sites/default/files/latinise_compact.js_.txt
-# 
+#
 import unicodedata
 
 
@@ -23,19 +23,21 @@ def discovery(tests):
                 print(f"decomp /{c1}/ {decomp}")
             # https://stackoverflow.com/questions/8935111/translating-letters-not-in-7bit-ascii-to-ascii-like-%C5%84-to-n-and-%C4%85-to-a
             try:
-                cname = uni[:uni.index(' WITH')]
-                print (unicodedata.lookup(cname))
+                cname = uni[: uni.index(" WITH")]
+                print(unicodedata.lookup(cname))
             except (ValueError, KeyError):
                 print(f"Failed to find base letter of {uni} with WITH")
             try:
                 cname = uni.split()[-1]
                 if "SHARP" in uni:
-                    cname = "".join([ch*2 for ch in cname])
+                    cname = "".join([ch * 2 for ch in cname])
                 if "SMALL" in uni:
                     cname = cname.lower()
                 print(f"I think base letter is /{cname}/")
             except (ValueError, KeyError):
-                print(f"Failed to find base letter of {uni} with last word")         
+                print(f"Failed to find base letter of {uni} with last word")
+
+
 if __name__ == "__main__":  # pragma: no cover
     # setup()
     tests = [
@@ -54,6 +56,6 @@ if __name__ == "__main__":  # pragma: no cover
         "æ",
         # where is "ue", "oe" liason?
         # "å",
-        # other liason "ng" "hv"? "oi" 
+        # other liason "ng" "hv"? "oi"
     ]
     discovery(tests)

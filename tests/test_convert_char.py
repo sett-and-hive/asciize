@@ -121,4 +121,3 @@ def test_char_converson():
 
 
 # How does NNPES treat O'Brien? https://npiregistry.cms.hhs.gov/ O'BRIEN - no worries
-

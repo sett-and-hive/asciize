@@ -26,21 +26,23 @@ def convert_single_latins(input_string):
 
     What happens to non-Latin-based characters in unknown at this time.
     """
+
     def base_single_char(c):
         try:
             name = unicodedata.name(c)
-            name = name[:name.index(' WITH')]
+            name = name[: name.index(" WITH")]
             return unicodedata.lookup(name)
-        #print (unicodedata.lookup(cname))
+        # print (unicodedata.lookup(cname))
         except (ValueError, KeyError):
             return c
-    
+
     return "".join([base_single_char(c) for c in input_string])
 
 
 def direct_remove(input_string):
     return input_string
-    
+
+
 def character_coversion(input_character):
     """Expects byte string."""
     retval = remove_accents(input_character)

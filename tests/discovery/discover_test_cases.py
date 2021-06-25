@@ -81,7 +81,6 @@ def auto_discovery(outfile):
         "sk-SK",
         "sl-SI",
         "sv-SE",
-
     ]
     fake = Faker(locale_list)
     ofile = open(outfile, "w")
@@ -100,7 +99,7 @@ def auto_discovery(outfile):
                 print("*saving*")
                 ofile.write(f"{fname}\n")
     except KeyboardInterrupt:
-        print('interrupted!')
+        print("interrupted!")
     ofile.close()
 
 

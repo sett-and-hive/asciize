@@ -110,8 +110,12 @@ def test_char_converson():
         ["ž", "z"],
         ["ź", "z"],
         ["ż", "z"],
+        ["ß", "ss"],
+        ["ẞ", "SS"],
+        ["æ", "ae"],
+        [" ", " "],
         # Synthetic Czech/Norweian/Polish name
-        ["Øldřich Špłaček", "Oldrich Splacek"],
+        ["Øldřichß, Špłačæk", "Oldrichss, Splacaek"],
     ]
 
     for input, expected in tests:

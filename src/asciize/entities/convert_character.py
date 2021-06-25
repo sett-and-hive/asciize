@@ -32,11 +32,35 @@ def convert_single_latins(input_string):
             name = unicodedata.name(c)
             name = name[: name.index(" WITH")]
             return unicodedata.lookup(name)
-        # print (unicodedata.lookup(cname))
         except (ValueError, KeyError):
             return c
 
     return "".join([base_single_char(c) for c in input_string])
+
+
+def convert_multiple_latins(input_string):
+    """Convert other characters that are based on multiple Latin characters.
+    /ẞ/ (7838) LATIN CAPITAL LETTER SHARP S
+    /æ/ (230) LATIN SMALL LETTER AE
+
+    What happens to non-Latin-based characters in unknown at this time.
+    """
+
+    def base_multi_char(c):
+        try:
+            name = unicodedata.name(c)
+            chars = name.split()[-1]
+            if "LATIN" not in name:
+                raise ValueError
+            if "SHARP" in name:
+                chars = "".join([ch * 2 for ch in chars])
+            if "SMALL" in name:
+                chars = chars.lower()
+            return chars
+        except (ValueError, KeyError):
+            return c
+
+    return "".join([base_multi_char(c) for c in input_string])
 
 
 def direct_remove(input_string):
@@ -48,6 +72,8 @@ def character_coversion(input_character):
     retval = remove_accents(input_character)
     if not retval.isascii():
         retval = convert_single_latins(retval)
+    if not retval.isascii():
+        retval = convert_multiple_latins(retval)
     if not retval.isascii():
         retval = direct_remove(retval)
     return retval

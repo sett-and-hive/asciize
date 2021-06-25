@@ -26,20 +26,29 @@ def discovery(tests):
                 cname = uni[:uni.index(' WITH')]
                 print (unicodedata.lookup(cname))
             except (ValueError, KeyError):
-                print(f"Failed to find base letter of {uni}")
-
+                print(f"Failed to find base letter of {uni} with WITH")
+            try:
+                cname = uni.split()[-1]
+                if "SHARP" in uni:
+                    cname = "".join([ch*2 for ch in cname])
+                if "SMALL" in uni:
+                    cname = cname.lower()
+                print(f"I think base letter is /{cname}/")
+            except (ValueError, KeyError):
+                print(f"Failed to find base letter of {uni} with last word")         
 if __name__ == "__main__":  # pragma: no cover
     # setup()
     tests = [
-        "ł",
-        "ø",
+        # "ł",
+        # "ø",
         "ß",
-        "ü",
-        "ȕ",
+        "ẞ",
+        # "ü",
+        # "ȕ",
         # "à",
         # "á",
         # "â",
-        "ã",
+        # "ã",
         # "ä",
         # "ó",
         "æ",

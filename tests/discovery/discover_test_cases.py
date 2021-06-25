@@ -91,12 +91,12 @@ def auto_discovery(outfile):
             # print(fname)
             aname = character_coversion(fname)
             # print(aname)
-            print(f" {fname} --> {aname}")
+            # print(f" {fname} --> {aname}")
             # key_input = str(input("Capture for test?\n"))
             # print(key_input)
 
             if not aname.isascii():
-                print("*saving*")
+                print("*saving* {fname} --> {aname}")
                 ofile.write(f"{fname}\n")
     except KeyboardInterrupt:
         print("interrupted!")

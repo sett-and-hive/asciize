@@ -53,39 +53,54 @@ def discovery(outfile):
 
 
 def auto_discovery(outfile):
-    attempts = 1000
+    attempts = 100000000
     locale_list = [
+        "cs-CZ",
+        "da-DK",
+        "de",
         "de-CH",
         "de-AT",
         "en-PH",
+        "fi-FI",
         "fr-FR",
         "es",
+        "et-EE",
         "ga-IE",
         "hu-HU",
+        "lb-LU",
+        "lt-LT",
+        "lv-LV",
+        "mt-MT",
+        "nl-BE",
+        "nl-NL",
         "no_NO",
+        "pl-PL",
         "pt_BR",
-        "pt_pt",
-        "cs-CZ",
-        "fi-FI",
+        "pt_PT",
+        "ro-RO",
+        "sk-SK",
+        "sl-SI",
+        "sv-SE",
+
     ]
     fake = Faker(locale_list)
     ofile = open(outfile, "w")
     # while True is True:
-    # try:
-    for i in range(attempts):
-        fname = fake.name()
-        # print(fname)
-        aname = character_coversion(fname)
-        # print(aname)
-        print(f" {fname} --> {aname}")
-        # key_input = str(input("Capture for test?\n"))
-        # print(key_input)
+    try:
+        for i in range(attempts):
+            fname = fake.name()
+            # print(fname)
+            aname = character_coversion(fname)
+            # print(aname)
+            print(f" {fname} --> {aname}")
+            # key_input = str(input("Capture for test?\n"))
+            # print(key_input)
 
-        if not aname.isascii():
-            print("*saving*")
-            ofile.write(f"{fname}\n")
-    # except KeyboardInterrupt:
-    #         print('interrupted!')
+            if not aname.isascii():
+                print("*saving*")
+                ofile.write(f"{fname}\n")
+    except KeyboardInterrupt:
+        print('interrupted!')
     ofile.close()
 
 

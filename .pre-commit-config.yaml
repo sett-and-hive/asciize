@@ -54,3 +54,8 @@
 #     rev: ''
 #     hooks:
 #     -   id: markdown-link-check
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v2.19.4
+    hooks:
+    -   id: pyupgrade
+        args: [--py37-plus]

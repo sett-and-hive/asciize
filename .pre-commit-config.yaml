@@ -15,7 +15,7 @@ repos:
 #     -   id: check-merge-conflict
 
 -   repo: https://github.com/psf/black
-    rev: 20.8b1
+    rev: 21.6b0
     hooks:
     -   id: black
 
@@ -29,10 +29,10 @@ repos:
 #     hooks:
 #     -   id: autopep8
 
-# -   repo: https://github.com/pre-commit/mirrors-isort
-#     #rev: ''  # Use the revision sha / tag you want to point at
-#     hooks:
-#     -   id: isort
+-   repo: https://github.com/pre-commit/mirrors-isort
+    rev: 'v5.9.1'  # Use the revision sha / tag you want to point at
+    hooks:
+    -   id: isort
 
 # #-   repo: https://github.com/pre-commit/mirrors-pylint
 # #    rev: ''  # Use the sha / tag you want to point at
@@ -41,18 +41,18 @@ repos:
 
 
 -   repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.6.0  # Use the ref you want to point at
+    rev: v1.9.0  # Use the ref you want to point at
     hooks:
     -   id: rst-backticks
     -   id: rst-inline-touching-normal
 
 -   repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: ''
+    rev: '2.1.5'
     hooks:
     -   id: shellcheck
 
 -   repo: https://github.com/gruntwork-io/pre-commit
-    rev: ''
+    rev: 'v0.1.12'
     hooks:
     -   id: markdown-link-check
 -   repo: https://github.com/asottile/pyupgrade

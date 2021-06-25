@@ -86,15 +86,15 @@ def test_char_converson():
         ["ȳ", "y"],
         ["ẏ", "y"],
         # harder
-        # [u"ø", "o"],
-        # [u"ø", "o"],
+        ["ø", "o"],
+        ["ø", "o"],
         # consonants
         ["ç", "c"],
         ["č", "c"],
         ["ģ", "g"],
         ["ķ", "k"],
         ["ļ", "l"],
-        # ["ł", "l"],
+        ["ł", "l"],
         ["ĺ", "l"],
         ["ņ", "n"],
         ["ń", "n"],
@@ -110,8 +110,8 @@ def test_char_converson():
         ["ž", "z"],
         ["ź", "z"],
         ["ż", "z"],
-        # Synthetic Czech name
-        ["Oldřich Špaček", "Oldrich Spacek"],
+        # Synthetic Czech/Norweian/Polish name
+        ["Øldřich Špłaček", "Oldrich Splacek"],
     ]
 
     for input, expected in tests:
@@ -120,4 +120,5 @@ def test_char_converson():
         assert output == expected
 
 
-# How does NNPIES treat O'Brien
+# How does NNPES treat O'Brien? https://npiregistry.cms.hhs.gov/ O'BRIEN - no worries
+

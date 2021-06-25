@@ -35,9 +35,9 @@ Asciize
 Commentary
 ----------
 
-It is a sad state to things in our IT industry in the US that we often cannot and 
-do not properly collect people's names in databases if their actual names include 
-characters outside the original 7-bit ASCII set.  Yet, with so much data collected on older systems of record, there has been a tradition in the industry to ignore accents in names in Latin characters and even to suppress capitalization.  More recently 
+It is a sad state to things in our IT industry in the US that we often cannot and
+do not properly collect people's names in databases if their actual names include
+characters outside the original 7-bit ASCII set.  Yet, with so much data collected on older systems of record, there has been a tradition in the industry to ignore accents in names in Latin characters and even to suppress capitalization.  More recently
 [https://a61.asmdc.org/news/20170330-california-jose-goes-accent-mark-e-law]
 
 NNPES blah blah

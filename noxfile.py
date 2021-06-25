@@ -59,7 +59,9 @@ def activate_virtualenv_in_precommit_hooks(session: Session) -> None:
         text = hook.read_text()
         bindir = repr(session.bin)[1:-1]  # strip quotes
         if not (
-            Path("A") == Path("a") and bindir.lower() in text.lower() or bindir in text
+            Path("A") == Path("a")
+            and bindir.lower() in text.lower()
+            or bindir in text
         ):
             continue
 
@@ -120,7 +122,9 @@ def mypy(session: Session) -> None:
     session.install("mypy", "pytest")
     session.run("mypy", *args)
     if not session.posargs:
-        session.run("mypy", f"--python-executable={sys.executable}", "noxfile.py")
+        session.run(
+            "mypy", f"--python-executable={sys.executable}", "noxfile.py"
+        )
 
 
 @session(python=python_versions)
@@ -129,7 +133,9 @@ def tests(session: Session) -> None:
     session.install(".")
     session.install("coverage[toml]", "pytest", "pygments")
     try:
-        session.run("coverage", "run", "--parallel", "-m", "pytest", *session.posargs)
+        session.run(
+            "coverage", "run", "--parallel", "-m", "pytest", *session.posargs
+        )
     finally:
         if session.interactive:
             session.notify("coverage")
@@ -184,10 +190,12 @@ def docs_build(session: Session) -> None:
 
 @session(python="3.8")
 def docs(session: Session) -> None:
-    """Build and serve the documentation with live reloading on file changes."""
+    """Build and serve the documentation with live reloading on file change."""
     args = session.posargs or ["--open-browser", "docs", "docs/_build"]
     session.install(".")
-    session.install("sphinx", "sphinx-autobuild", "sphinx-click", "sphinx-rtd-theme")
+    session.install(
+        "sphinx", "sphinx-autobuild", "sphinx-click", "sphinx-rtd-theme"
+    )
 
     build_dir = Path("docs", "_build")
     if build_dir.exists():

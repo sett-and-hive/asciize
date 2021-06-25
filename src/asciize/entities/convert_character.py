@@ -1,4 +1,4 @@
-"""Domain entity for coversion of unicode character into base ASCII Latin character."""
+"""Domain entity for coversion of unicode into base ASCII Latin characters."""
 
 
 import unicodedata
@@ -18,7 +18,7 @@ def remove_accents(input_str):
 
 
 def convert_single_latins(input_string):
-    """Convert other single character unicode characters based on single Latin characters.
+    """Convert other characters that are based on single Latin characters.
     Ø LATIN SMALL LETTER O WITH STROKE
     ł LATIN SMALL LETTER L WITH STROKE
 

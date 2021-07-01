@@ -4,12 +4,8 @@
 import unicodedata
 
 
-def remove_accents(input_str):
+def remove_accents(input_str: str) -> str:
     """Remove accents from unicode string, return unicode string.
-
-    TODO:
-    * Eivind Næss
-    * Stine Ødegård
 
     [https://stackoverflow.com/questions/517923/what-is-the-best-way-to-remove-accents-normalize-in-a-python-unicode-string]
     """
@@ -17,7 +13,7 @@ def remove_accents(input_str):
     return "".join([c for c in nfkd if not unicodedata.combining(c)])
 
 
-def convert_single_latins(input_string):
+def convert_single_latins(input_string: str) -> str:
     """Convert other characters that are based on single Latin characters.
     Ø LATIN SMALL LETTER O WITH STROKE
     ł LATIN SMALL LETTER L WITH STROKE
@@ -27,7 +23,7 @@ def convert_single_latins(input_string):
     What happens to non-Latin-based characters in unknown at this time.
     """
 
-    def base_single_char(c):
+    def base_single_char(c: str) -> str:
         try:
             name = unicodedata.name(c)
             name = name[: name.index(" WITH")]
@@ -38,7 +34,7 @@ def convert_single_latins(input_string):
     return "".join([base_single_char(c) for c in input_string])
 
 
-def convert_multiple_latins(input_string):
+def convert_multiple_latins(input_string: str) -> str:
     """Convert other characters that are based on multiple Latin characters.
     /ẞ/ (7838) LATIN CAPITAL LETTER SHARP S
     /æ/ (230) LATIN SMALL LETTER AE
@@ -46,7 +42,7 @@ def convert_multiple_latins(input_string):
     What happens to non-Latin-based characters in unknown at this time.
     """
 
-    def base_multi_char(c):
+    def base_multi_char(c: str) -> str:
         try:
             name = unicodedata.name(c)
             chars = name.split()[-1]
@@ -63,11 +59,11 @@ def convert_multiple_latins(input_string):
     return "".join([base_multi_char(c) for c in input_string])
 
 
-def direct_remove(input_string):
-    return input_string
+def direct_remove(input_string: str) -> str:
+    return "".join([c for c in input_string if c.isascii()])
 
 
-def character_coversion(input_character):
+def character_conversion(input_character: str) -> str:
     """Expects byte string."""
     retval = remove_accents(input_character)
     if not retval.isascii():

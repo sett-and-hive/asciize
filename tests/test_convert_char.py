@@ -1,9 +1,9 @@
 """Test coversion of unicode character into base ASCII Latin character."""
 
-from asciize.entities.convert_character import character_coversion
+from asciize.entities.convert_character import character_conversion
 
 
-def test_char_converson():
+def test_char_converson() -> None:
     """Test Americanizing character conversion."""
     tests = [
         ["José", "Jose"],
@@ -116,9 +116,12 @@ def test_char_converson():
         [" ", " "],
         # Synthetic Czech/Norweian/Polish name
         ["Øldřichß, Špłačæk", "Oldrichss, Splacaek"],
+        # Non-Latin
+        ["英語", ""],
+        ["Tiger虎", "Tiger"],
     ]
 
     for input, expected in tests:
         print(f"In /{input}/ Test /{expected}/")
-        output = character_coversion(input)
+        output = character_conversion(input)
         assert output == expected

@@ -3,9 +3,10 @@
 # http://semplicewebsites.com/sites/default/files/latinise_compact.js_.txt
 #
 import unicodedata
+from typing import List
 
 
-def discovery(tests):
+def discovery(tests: List[str]) -> None:
     """Input a list of strings and reveal unicode details."""
     for test in tests:
         print(f"Testing /{test}/")
@@ -39,23 +40,21 @@ def discovery(tests):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    # setup()
     tests = [
-        # "ł",
-        # "ø",
+        "ł",
+        "ø",
         "ß",
         "ẞ",
-        # "ü",
-        # "ȕ",
-        # "à",
-        # "á",
-        # "â",
-        # "ã",
-        # "ä",
-        # "ó",
+        "ü",
+        "ȕ",
+        "à",
+        "á",
+        "â",
+        "ã",
+        "ä",
+        "ó",
+        "å",
         "æ",
         # where is "ue", "oe" liason?
-        # "å",
-        # other liason "ng" "hv"? "oi"
     ]
     discovery(tests)

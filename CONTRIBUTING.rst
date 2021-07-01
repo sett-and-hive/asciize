@@ -37,7 +37,7 @@ and/or steps to reproduce the issue.
 How to request a feature
 ------------------------
 
-Request features on the `Issue Tracker`_.
+Request features on the `Issue Tracker`_:
 
 
 How to set up your development environment

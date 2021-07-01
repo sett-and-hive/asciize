@@ -4,20 +4,12 @@ discover missing test cases.
 This is an exploratory testing tool.
 """
 
-from faker import Faker
+from faker import Faker  # type: ignore
 
-from asciize.entities.convert_character import character_coversion
-
-# import click
+from asciize.entities.convert_character import character_conversion
 
 
-# @click.command()
-# @click.version_option()
-def setup():
-    return
-
-
-def discovery(outfile):
+def discovery(outfile: str) -> None:
     locale_list = [
         "de-CH",
         "de-AT",
@@ -34,14 +26,12 @@ def discovery(outfile):
     ]
     fake = Faker(locale_list)
     ofile = open(outfile, "w")
-    # while True is True:
     try:
         while True:
             fname = fake.name()
             print(fname)
-            aname = character_coversion(fname)
+            aname = character_conversion(fname)
             print(aname)
-            # print(f" {fname} -- {aname}")
             key_input = str(input("Capture for test?\n"))
             print(key_input)
             if key_input.upper() == "Y":
@@ -52,7 +42,8 @@ def discovery(outfile):
     ofile.close()
 
 
-def auto_discovery(outfile):
+def auto_discovery(outfile: str) -> None:
+    """Run many names from lots of locales looking for missing conversions."""
     attempts = 100000000
     locale_list = [
         "cs-CZ",
@@ -89,7 +80,7 @@ def auto_discovery(outfile):
         for i in range(attempts):
             fname = fake.name()
             # print(fname)
-            aname = character_coversion(fname)
+            aname = character_conversion(fname)
             # print(aname)
             # print(f" {fname} --> {aname}")
             # key_input = str(input("Capture for test?\n"))
@@ -110,6 +101,5 @@ def auto_discovery(outfile):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    # setup()
     outfile = "discovery.txt"
     auto_discovery(outfile)

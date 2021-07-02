@@ -1,7 +1,11 @@
 """Command-line interface."""
 
+import click
 
-def main(prog_name: str) -> None:
+
+@click.command()
+@click.version_option()
+def main() -> None:
     """Asciize."""
 
 

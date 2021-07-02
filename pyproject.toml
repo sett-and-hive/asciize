@@ -1,0 +1,74 @@
+[tool.poetry]
+name = "asciize"
+version = "0.0.0"
+description = "Asciize"
+authors = ["Tom Willis <no-reply@example.com>"]
+license = "Apache-2.0"
+readme = "README.rst"
+homepage = "https://github.com/tomwillis608/asciize"
+repository = "https://github.com/tomwillis608/asciize"
+documentation = "https://asciize.readthedocs.io"
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.urls]
+Changelog = "https://github.com/tomwillis608/asciize/releases"
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+click = "^7.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.3"
+coverage = {extras = ["toml"], version = "^5.4"}
+safety = "^1.10.3"
+mypy = "^0.812"
+typeguard = "^2.12.0"
+xdoctest = {extras = ["colors"], version = "^0.15.4"}
+sphinx = "^3.5.4"
+sphinx-autobuild = "^2021.3.14"
+pre-commit = "^2.12.0"
+flake8 = "^3.9.0"
+black = "^20.8b1"
+flake8-bandit = "^2.1.2"
+flake8-bugbear = "^21.4.3"
+flake8-docstrings = "^1.6.0"
+flake8-rst-docstrings = "^0.0.14"
+pep8-naming = "^0.11.1"
+darglint = "^1.8.0"
+reorder-python-imports = "^2.4.0"
+pre-commit-hooks = "^3.4.0"
+sphinx-rtd-theme = "^0.5.2"
+sphinx-click = "^2.7.1"
+Pygments = "^2.8.1"
+Faker = "^8.8.1"
+
+[tool.poetry.scripts]
+asciize = "asciize.__main__:main"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["asciize"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 80
+
+[tool.black]
+line-length = 79
+
+[tool.mypy]
+strict = true
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

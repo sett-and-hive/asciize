@@ -6,7 +6,7 @@ This is an exploratory testing tool.
 
 from faker import Faker  # type: ignore
 
-from asciize.entities.convert_character import character_conversion
+from asciize.entities.convert_character import character_conversion  # type: ignore
 
 
 def discovery(outfile: str) -> None:

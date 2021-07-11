@@ -1,6 +1,4 @@
 """Domain entity for coversion of unicode into base ASCII Latin characters."""
-
-
 import unicodedata
 
 

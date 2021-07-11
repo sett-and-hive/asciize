@@ -3,10 +3,8 @@ discover missing test cases.
 
 This is an exploratory testing tool.
 """
-
-from faker import Faker  # type: ignore
-
 from asciize.entities.convert_character import character_conversion  # type: ignore
+from faker import Faker  # type: ignore
 
 
 def discovery(outfile: str) -> None:

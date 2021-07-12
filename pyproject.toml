@@ -21,6 +21,7 @@ click = "^7.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.3"
+pytest-randomly = "^3.8.0"
 coverage = {extras = ["toml"], version = "^5.4"}
 safety = "^1.10.3"
 mypy = "^0.812"
@@ -72,6 +73,10 @@ disallow_untyped_decorators = false
 
 [tool.flake8]
 max-line-length = 88
+per-file-ignores = [
+    "tests/*.py: S101"
+    # There are multiple `assert`s in tests, we allow them:
+]
 
 [tool.isort]
 profile = "black"

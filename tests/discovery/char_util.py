@@ -1,7 +1,13 @@
-"""char_util"""
-# TIL https://pypi.org/project/Unidecode/ but it is GPL2 and is mapping tables
-# http://semplicewebsites.com/sites/default/files/latinise_compact.js_.txt
-#
+"""char_util reveals some Unicode details of characters.
+
+This is an exploratory testin tool.
+
+A simlar tool to asciize: <https://pypi.org/project/Unidecode/>,
+but it is GPL2 and is based on mapping tables
+
+A reference Latin character mapping:
+<https://docs.oracle.com/cd/E29584_01/webhelp/mdex_basicDev/src/rbdv_chars_mapping.html>
+"""
 import unicodedata
 from typing import List
 

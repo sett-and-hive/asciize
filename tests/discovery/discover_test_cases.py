@@ -1,5 +1,6 @@
-"""Use Faker to generate text (names) to visually test asciize to
-discover missing test cases.
+"""Use Faker to generate text (names).
+
+Visually test asciize to discover missing test cases.
 
 This is an exploratory testing tool.
 """
@@ -8,6 +9,7 @@ from faker import Faker  # type: ignore
 
 
 def discovery(outfile: str) -> None:
+    """Look for failures to convert to ASCII, to be new test cases."""
     locale_list = [
         "de-CH",
         "de-AT",
@@ -75,7 +77,7 @@ def auto_discovery(outfile: str) -> None:
     ofile = open(outfile, "w")
     # while True is True:
     try:
-        for i in range(attempts):
+        for _unused in range(attempts):
             fname = fake.name()
             # print(fname)
             aname = character_conversion(fname)

@@ -21,7 +21,7 @@ repos:
     hooks:
     -   id: black
 
--   repo: https://gitlab.com/pycqa/flake8
+-   repo: https://github.com/PyCQA/flake8
     rev: '3.9.2'
     hooks:
     -   id: flake8
@@ -31,11 +31,6 @@ repos:
     rev: 'v1.5.7'
     hooks:
     -   id: autopep8
-
-# -   repo: https://github.com/pre-commit/mirrors-isort
-#     rev: 'v5.9.1'
-#     hooks:
-#     -   id: isort
 
 -   repo: https://github.com/asottile/reorder_python_imports
     rev: v2.5.0
@@ -64,7 +59,7 @@ repos:
 #     -   id: markdown-link-check
 
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v2.19.4
+    rev: v2.20.0
     hooks:
     -   id: pyupgrade
         args: [--py37-plus]

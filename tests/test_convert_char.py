@@ -1,5 +1,4 @@
 """Test coversion of unicode character into base ASCII Latin character."""
-
 from asciize.entities.convert_character import character_conversion  # type: ignore
 
 

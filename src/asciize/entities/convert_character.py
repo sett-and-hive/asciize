@@ -1,6 +1,4 @@
 """Domain entity for coversion of unicode into base ASCII Latin characters."""
-
-
 import unicodedata
 
 
@@ -15,6 +13,7 @@ def remove_accents(input_str: str) -> str:
 
 def convert_single_latins(input_string: str) -> str:
     """Convert other characters that are based on single Latin characters.
+
     Ø LATIN SMALL LETTER O WITH STROKE
     ł LATIN SMALL LETTER L WITH STROKE
 
@@ -36,6 +35,7 @@ def convert_single_latins(input_string: str) -> str:
 
 def convert_multiple_latins(input_string: str) -> str:
     """Convert other characters that are based on multiple Latin characters.
+
     /ẞ/ (7838) LATIN CAPITAL LETTER SHARP S
     /æ/ (230) LATIN SMALL LETTER AE
 
@@ -60,11 +60,12 @@ def convert_multiple_latins(input_string: str) -> str:
 
 
 def direct_remove(input_string: str) -> str:
+    """Strip out any non-ASCII characters like 語."""
     return "".join([c for c in input_string if c.isascii()])
 
 
 def character_conversion(input_character: str) -> str:
-    """Expects byte string."""
+    """Apply conversions. Expects byte string."""
     retval = remove_accents(input_character)
     if not retval.isascii():
         retval = convert_single_latins(retval)

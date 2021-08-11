@@ -9,11 +9,11 @@ from asciize.entities.convert_character import character_conversion  # type: ign
 @click.argument("string_argument", nargs=-1)  # String to asciize
 def main(string_argument) -> None:
     """Asciize a string from the command line."""
-    if len(string_argument):  # clean this up later
+    if not string_argument:
+        _print_help()
+    else:
         result = character_conversion(str(string_argument[0]))
         print(result)
-    else:
-        _print_help()
 
 
 def _print_help():

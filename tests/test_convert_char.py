@@ -129,9 +129,9 @@ def test_char_converson() -> None:
         ["Tiger虎", "Tiger"],
     ]
 
-    for input, expected in tests:
-        print(f"In /{input}/ Test /{expected}/")
-        output = character_conversion(input)
+    for accented, expected in tests:
+        print(f"In /{accented}/ Test /{expected}/")
+        output = character_conversion(accented)
         assert output == expected
 
 

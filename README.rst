@@ -69,6 +69,12 @@ Usage
 
 Please see the `Command-line Reference <Usage_>`_ for details.
 
+Simple usage
+.. code-block:: console
+  poetry run asciize Cañón
+  Canon
+
+
 
 Contributing
 ------------

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "asciize"
-version = "0.0.0"
+version = "0.0.1"
 description = "Asciize"
 authors = ["Tom Willis <no-reply@example.com>"]
 license = "Apache-2.0"

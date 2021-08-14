@@ -72,6 +72,7 @@ def auto_discovery(outfile: str) -> None:
         "sk-SK",
         "sl-SI",
         "sv-SE",
+        "tr-TR",
     ]
     fake = Faker(locale_list)
     ofile = open(outfile, "w")

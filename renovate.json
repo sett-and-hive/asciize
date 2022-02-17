@@ -8,7 +8,7 @@
   },
   "packageRules": [
     {
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": ["devDependencies", "dev-dependencies", "tool.poetry.dev-dependencies"],
       "automerge": true
     }
   ]

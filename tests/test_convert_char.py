@@ -1,5 +1,5 @@
 """Test coversion of unicode character into base ASCII Latin character."""
-from asciize.entities.convert_character import character_conversion  # type: ignore
+from asciize.entities.convert_character import character_conversion
 from asciize.entities.convert_character import convert_multiple_latins
 from asciize.entities.convert_character import convert_single_latins
 from asciize.entities.convert_character import direct_remove
@@ -136,7 +136,7 @@ def test_char_converson() -> None:
         assert output == expected
 
 
-def test_remove_accents():
+def test_remove_accents() -> None:
     """Test remove_accents."""
     accented_character = "ű"  # u with a double acute accent
     unaccented_character = "u"
@@ -144,7 +144,7 @@ def test_remove_accents():
     assert result == unaccented_character
 
 
-def test_convert_single_latins():
+def test_convert_single_latins() -> None:
     """Test convert_single_latins."""
     accented_character = "Ø"  # Latin letter O with stroke
     unaccented_character = "O"
@@ -152,7 +152,7 @@ def test_convert_single_latins():
     assert result == unaccented_character
 
 
-def test_convert_multiple_latins():
+def test_convert_multiple_latins() -> None:
     """Test test_convert_multiple_latins."""
     accented_character = "ẞ"  # Latin letter sharp s
     unaccented_characters = "SS"
@@ -160,7 +160,7 @@ def test_convert_multiple_latins():
     assert result == unaccented_characters
 
 
-def test_direct_remove():
+def test_direct_remove() -> None:
     """Test direct_remove."""
     test_load = "☆"
     empty_string = ""
@@ -171,28 +171,28 @@ def test_direct_remove():
 ASCII_CHARACTER = "A"
 
 
-def test_remove_accents_noop():
+def test_remove_accents_noop() -> None:
     """Test convert_single_latins."""
     test_load = ASCII_CHARACTER
     result = remove_accents(test_load)
     assert result == test_load
 
 
-def test_convert_single_latins_noop():
+def test_convert_single_latins_noop() -> None:
     """Test convert_single_latins."""
     test_load = ASCII_CHARACTER
     result = convert_single_latins(test_load)
     assert result == test_load
 
 
-def test_convert_multiple_latins_noop():
+def test_convert_multiple_latins_noop() -> None:
     """Test test_convert_multiple_latins."""
     test_load = ASCII_CHARACTER
     result = convert_multiple_latins(test_load)
     assert result == test_load
 
 
-def test_direct_remove_noop():
+def test_direct_remove_noop() -> None:
     """Test direct_remove."""
     test_load = ASCII_CHARACTER
     result = direct_remove(test_load)

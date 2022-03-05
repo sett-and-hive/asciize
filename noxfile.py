@@ -118,7 +118,6 @@ def mypy(session: Session) -> None:
     args = session.posargs or ["src", "tests", "docs/conf.py"]
     session.install(".")
     session.install("mypy", "pytest")
-    # session.run("mypy", "--install-types", "--non-interactive", "src")
     session.run("mypy", *args)
     if not session.posargs:
         session.run("mypy", f"--python-executable={sys.executable}", "noxfile.py")
@@ -140,7 +139,7 @@ def tests(session: Session) -> None:
 def coverage(session: Session) -> None:
     """Produce the coverage report."""
     # Do not use session.posargs unless this is the only session.
-    nsessions = len(session._runner.manifest)  # type: ignore[attr-defined]
+    nsessions = len(session._runner.manifest)
     has_args = session.posargs and nsessions == 1
     args = session.posargs if has_args else ["report"]
 

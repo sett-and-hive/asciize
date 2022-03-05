@@ -4,8 +4,8 @@ Visually test asciize to discover missing test cases.
 
 This is an exploratory testing tool.
 """
-from asciize.entities.convert_character import character_conversion  # type: ignore
-from faker import Faker  # type: ignore
+from asciize.entities.convert_character import character_conversion
+from faker import Faker
 
 
 def discovery(outfile: str) -> None:
@@ -76,16 +76,10 @@ def auto_discovery(outfile: str) -> None:
     ]
     fake = Faker(locale_list)
     ofile = open(outfile, "w")
-    # while True is True:
     try:
         for _unused in range(attempts):
             fname = fake.name()
-            # print(fname)
             aname = character_conversion(fname)
-            # print(aname)
-            # print(f" {fname} --> {aname}")
-            # key_input = str(input("Capture for test?\n"))
-            # print(key_input)
 
             if not aname.isascii():
                 print("*saving* {fname} --> {aname}")

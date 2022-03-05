@@ -135,20 +135,11 @@ def tests(session: Session) -> None:
             session.notify("coverage")
 
 
-@session
+@session(python="3.8")
 def coverage(session: Session) -> None:
     """Produce the coverage report."""
-    # Do not use session.posargs unless this is the only session.
-    nsessions = len(session._runner.manifest)
-    has_args = session.posargs and nsessions == 1
-    args = session.posargs if has_args else ["report"]
-
     session.install("coverage[toml]")
-
-    if not has_args and any(Path().glob(".coverage.*")):
-        session.run("coverage", "combine")
-
-    session.run("coverage", *args)
+    session.run("coverage", "xml", "--fail-under=0")
 
 
 @session(python=python_versions)

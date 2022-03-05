@@ -61,7 +61,8 @@ if __name__ == "__main__":  # pragma: no cover
         "ó",
         "å",
         "æ",
-        "ğ"
+        "ğ",
+        "Ə",  # schwa as in Azerbajani, meaning ash (æ).
         # where is "ue", "oe" liason?
     ]
     discovery(tests)

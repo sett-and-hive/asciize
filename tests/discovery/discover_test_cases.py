@@ -76,16 +76,10 @@ def auto_discovery(outfile: str) -> None:
     ]
     fake = Faker(locale_list)
     ofile = open(outfile, "w")
-    # while True is True:
     try:
         for _unused in range(attempts):
             fname = fake.name()
-            # print(fname)
             aname = character_conversion(fname)
-            # print(aname)
-            # print(f" {fname} --> {aname}")
-            # key_input = str(input("Capture for test?\n"))
-            # print(key_input)
 
             if not aname.isascii():
                 print("*saving* {fname} --> {aname}")

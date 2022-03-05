@@ -24,6 +24,7 @@ jobs:
     - name: "Install dependencies"
       run: |
         pip install nox
+        pip install nox-poetry
         pip install poetry
 
     - name: "Run nox for ${{ matrix.python-version }}"

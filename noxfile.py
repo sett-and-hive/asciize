@@ -19,7 +19,8 @@ except ImportError:
 
 
 package = "asciize"
-python_versions = ["3.7", "3.9", "3.8"]
+PYTHON_VERSIONS = ["3.7", "3.9", "3.8"]
+PYTHON_CURRENT_VERSION = "3.9"
 nox.options.sessions = (
     "pre-commit",
     "safety",
@@ -82,7 +83,7 @@ def activate_virtualenv_in_precommit_hooks(session: Session) -> None:
         hook.write_text("\n".join(lines))
 
 
-@session(name="pre-commit", python="3.8")
+@session(name="pre-commit", python=PYTHON_CURRENT_VERSION)
 def precommit(session: Session) -> None:
     """Lint using pre-commit."""
     args = session.posargs or ["run", "--all-files", "--show-diff-on-failure"]
@@ -104,7 +105,7 @@ def precommit(session: Session) -> None:
         activate_virtualenv_in_precommit_hooks(session)
 
 
-@session(python="3.8")
+@session(python=PYTHON_CURRENT_VERSION)
 def safety(session: Session) -> None:
     """Scan dependencies for insecure packages."""
     requirements = session.poetry.export_requirements()
@@ -112,7 +113,7 @@ def safety(session: Session) -> None:
     session.run("safety", "check", "--full-report", f"--file={requirements}")
 
 
-@session(python=python_versions)
+@session(python=PYTHON_VERSIONS)
 def mypy(session: Session) -> None:
     """Type-check using mypy."""
     args = session.posargs or ["src", "tests", "docs/conf.py"]
@@ -123,12 +124,14 @@ def mypy(session: Session) -> None:
         session.run("mypy", f"--python-executable={sys.executable}", "noxfile.py")
 
 
-@session(python=python_versions)
+@session(python=PYTHON_VERSIONS)
 def tests(session: Session) -> None:
     """Run the test suite."""
     session.install(".")
-    session.install("coverage[toml]", "pytest", "pygments", "pytest-cov")
-    args = session.posargs or ["--cov", "--cov-report=xml"]
+    session.install(
+        "coverage[toml]", "pytest", "pygments", "pytest-cov", "pytest-benchmark"
+    )
+    args = session.posargs or ["--cov", "--cov-report=xml", "--benchmark-disable"]
     try:
         session.run("coverage", "run", "--parallel", "-m", "pytest", *args)
     finally:
@@ -136,22 +139,41 @@ def tests(session: Session) -> None:
             session.notify("coverage")
 
 
-@session(python="3.8")
+@session(python=PYTHON_CURRENT_VERSION)
 def coverage(session: Session) -> None:
     """Produce the coverage report."""
     session.install("coverage[toml]")
     session.run("coverage", "xml", "--fail-under=0")
 
 
-@session(python=python_versions)
+@session(python=PYTHON_CURRENT_VERSION)
+def benchmark(session: Session) -> None:
+    """Perfomance benchmark testing with pytest-benchmark."""
+    session.install(".")
+    session.install("pytest", "typeguard", "pygments", "pytest-benchmark")
+    session.run(
+        "pytest",
+        "--benchmark-json",
+        "benchmark-output.json",
+        "tests/test_convert_char.py",
+        *session.posargs,
+    )
+
+
+@session(python=PYTHON_VERSIONS)
 def typeguard(session: Session) -> None:
     """Runtime type checking using Typeguard."""
     session.install(".")
-    session.install("pytest", "typeguard", "pygments")
-    session.run("pytest", f"--typeguard-packages={package}", *session.posargs)
+    session.install("pytest", "typeguard", "pygments", "pytest-benchmark")
+    session.run(
+        "pytest",
+        "--benchmark-disable",
+        f"--typeguard-packages={package}",
+        *session.posargs,
+    )
 
 
-@session(python=python_versions)
+@session(python=PYTHON_VERSIONS)
 def xdoctest(session: Session) -> None:
     """Run examples with xdoctest."""
     args = session.posargs or ["all"]
@@ -160,7 +182,7 @@ def xdoctest(session: Session) -> None:
     session.run("python", "-m", "xdoctest", package, *args)
 
 
-@session(name="docs-build", python="3.8")
+@session(name="docs-build", python=PYTHON_CURRENT_VERSION)
 def docs_build(session: Session) -> None:
     """Build the documentation."""
     args = session.posargs or ["docs", "docs/_build"]
@@ -174,7 +196,7 @@ def docs_build(session: Session) -> None:
     session.run("sphinx-build", *args)
 
 
-@session(python="3.8")
+@session(python=PYTHON_CURRENT_VERSION)
 def docs(session: Session) -> None:
     """Build and serve the documentation with live reloading on file change."""
     args = session.posargs or ["--open-browser", "docs", "docs/_build"]

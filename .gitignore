@@ -128,3 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 discovery.txt
+
+# Benchmarking with pytest-benchmark
+benchmark-output.json

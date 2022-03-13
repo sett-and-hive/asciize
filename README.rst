@@ -31,6 +31,8 @@ Asciize
 .. |Black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black
    :alt: Black
+.. |Benchmark| image:: https://github.com/tomwillis608/asciize/actions/workflows/benchmark.yml/badge.svg?branch=main
+   :alt: Benchmark
 
 Commentary
 ----------

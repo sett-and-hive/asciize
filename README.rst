@@ -5,7 +5,7 @@ Asciize
 
 |Read the Docs| |Tests| |Codecov|
 
-|pre-commit| |Black|
+|pre-commit| |Black| |Benchmark|
 
 .. |PyPI| image:: https://img.shields.io/pypi/v/asciize.svg
    :target: https://pypi.org/project/asciize/

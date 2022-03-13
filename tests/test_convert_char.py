@@ -1,4 +1,11 @@
-"""Test coversion of unicode character into base ASCII Latin character."""
+"""Test coversion of unicode character into base ASCII Latin character.
+
+Using pytest-benchmark fixture https://pypi.org/project/pytest-benchmark/
+
+Typing the `benchmark` fixture as `Any` for convienience.
+"""
+from typing import Any
+
 from asciize.entities.convert_character import character_conversion
 from asciize.entities.convert_character import convert_multiple_latins
 from asciize.entities.convert_character import convert_single_latins
@@ -136,64 +143,64 @@ def test_char_converson() -> None:
         assert output == expected
 
 
-def test_remove_accents() -> None:
+def test_remove_accents(benchmark: Any) -> None:
     """Test remove_accents."""
     accented_character = "ű"  # u with a double acute accent
     unaccented_character = "u"
-    result = remove_accents(accented_character)
+    result = benchmark(remove_accents, accented_character)
     assert result == unaccented_character
 
 
-def test_convert_single_latins() -> None:
+def test_convert_single_latins(benchmark: Any) -> None:
     """Test convert_single_latins."""
     accented_character = "Ø"  # Latin letter O with stroke
     unaccented_character = "O"
-    result = convert_single_latins(accented_character)
+    result = benchmark(convert_single_latins, accented_character)
     assert result == unaccented_character
 
 
-def test_convert_multiple_latins() -> None:
+def test_convert_multiple_latins(benchmark: Any) -> None:
     """Test test_convert_multiple_latins."""
     accented_character = "ẞ"  # Latin letter sharp s
     unaccented_characters = "SS"
-    result = convert_multiple_latins(accented_character)
+    result = benchmark(convert_multiple_latins, accented_character)
     assert result == unaccented_characters
 
 
-def test_direct_remove() -> None:
+def test_direct_remove(benchmark: Any) -> None:
     """Test direct_remove."""
     test_load = "☆"
     empty_string = ""
-    result = direct_remove(test_load)
+    result = benchmark(direct_remove, test_load)
     assert result == empty_string
 
 
 ASCII_CHARACTER = "A"
 
 
-def test_remove_accents_noop() -> None:
+def test_remove_accents_noop(benchmark: Any) -> None:
     """Test convert_single_latins."""
     test_load = ASCII_CHARACTER
-    result = remove_accents(test_load)
+    result = benchmark(remove_accents, test_load)
     assert result == test_load
 
 
-def test_convert_single_latins_noop() -> None:
+def test_convert_single_latins_noop(benchmark: Any) -> None:
     """Test convert_single_latins."""
     test_load = ASCII_CHARACTER
-    result = convert_single_latins(test_load)
+    result = benchmark(convert_single_latins, test_load)
     assert result == test_load
 
 
-def test_convert_multiple_latins_noop() -> None:
+def test_convert_multiple_latins_noop(benchmark: Any) -> None:
     """Test test_convert_multiple_latins."""
     test_load = ASCII_CHARACTER
-    result = convert_multiple_latins(test_load)
+    result = benchmark(convert_multiple_latins, test_load)
     assert result == test_load
 
 
-def test_direct_remove_noop() -> None:
+def test_direct_remove_noop(benchmark: Any) -> None:
     """Test direct_remove."""
     test_load = ASCII_CHARACTER
-    result = direct_remove(test_load)
+    result = benchmark(direct_remove, test_load)
     assert result == test_load

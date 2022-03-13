@@ -26,6 +26,12 @@ jobs:
         with:
           python-version: "3.9"
 
+      - name: "Install dev dependencies"
+        run: |
+          pip install nox
+          pip install nox-poetry
+          pip install poetry
+
       - name: Run benchmark with nox
         run: nox -s benchmark
 

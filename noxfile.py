@@ -127,7 +127,9 @@ def mypy(session: Session) -> None:
 def tests(session: Session) -> None:
     """Run the test suite."""
     session.install(".")
-    session.install("coverage[toml]", "pytest", "pygments", "pytest-cov")
+    session.install(
+        "coverage[toml]", "pytest", "pygments", "pytest-cov", "pytest-benchmark"
+    )
     args = session.posargs or ["--cov", "--cov-report=xml"]
     try:
         session.run("coverage", "run", "--parallel", "-m", "pytest", *args)
@@ -147,8 +149,13 @@ def coverage(session: Session) -> None:
 def typeguard(session: Session) -> None:
     """Runtime type checking using Typeguard."""
     session.install(".")
-    session.install("pytest", "typeguard", "pygments")
-    session.run("pytest", f"--typeguard-packages={package}", *session.posargs)
+    session.install("pytest", "typeguard", "pygments", "pytest-benchmark")
+    session.run(
+        "pytest",
+        "--benchmark-disable",
+        f"--typeguard-packages={package}",
+        *session.posargs,
+    )
 
 
 @session(python=python_versions)

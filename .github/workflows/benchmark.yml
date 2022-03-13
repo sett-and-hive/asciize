@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - tom-perf-tests
 
 permissions:
   # deployments permission to deploy GitHub pages website

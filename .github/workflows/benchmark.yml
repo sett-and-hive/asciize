@@ -4,6 +4,12 @@ on:
     branches:
       - main
 
+permissions:
+  # deployments permission to deploy GitHub pages website
+  deployments: write
+  # contents permission to update benchmark contents in gh-pages branch
+  contents: write
+
 jobs:
   benchmark:
     name: Check performance regeression.
@@ -23,7 +29,7 @@ jobs:
         run: nox -s benchmark
 
       - name: Store benchmark result
-        uses: rhysd/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@v1
         with:
           name: Pytest-Benchmark Benchmark
           tool: 'pytest'

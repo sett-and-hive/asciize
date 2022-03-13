@@ -32,6 +32,7 @@ Asciize
    :target: https://github.com/psf/black
    :alt: Black
 .. |Benchmark| image:: https://github.com/tomwillis608/asciize/actions/workflows/benchmark.yml/badge.svg?branch=main
+   :target: https://tomwillis608.github.io/asciize/dev/bench/
    :alt: Benchmark
 
 Commentary

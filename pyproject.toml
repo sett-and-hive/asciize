@@ -46,6 +46,8 @@ Pygments = "^2.8.1"
 Faker = "^13.0.0"
 pytest-cov = "^3.0.0"
 pytest-benchmark = {extras = ["histogram"], version = "^3.4.1"}
+nox = "^2022.1.7"
+nox-poetry = "^0.9.0"
 
 [tool.poetry.scripts]
 asciize = "asciize.__main__:main"

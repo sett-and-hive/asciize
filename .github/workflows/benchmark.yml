@@ -35,7 +35,7 @@ jobs:
       - name: Run benchmark with nox
         run: nox -s benchmark
 
-      - name: Store benchmark result
+      - name: Store benchmark result in github.io
         uses: benchmark-action/github-action-benchmark@v1
         with:
           name: Pytest-Benchmark Benchmark

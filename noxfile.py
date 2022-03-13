@@ -130,7 +130,7 @@ def tests(session: Session) -> None:
     session.install(
         "coverage[toml]", "pytest", "pygments", "pytest-cov", "pytest-benchmark"
     )
-    args = session.posargs or ["--cov", "--cov-report=xml"]
+    args = session.posargs or ["--cov", "--cov-report=xml", "--benchmark-disable"]
     try:
         session.run("coverage", "run", "--parallel", "-m", "pytest", *args)
     finally:
@@ -138,11 +138,25 @@ def tests(session: Session) -> None:
             session.notify("coverage")
 
 
-@session(python="3.8")
+@session(python="3.9")
 def coverage(session: Session) -> None:
     """Produce the coverage report."""
     session.install("coverage[toml]")
     session.run("coverage", "xml", "--fail-under=0")
+
+
+@session(python="3.9")
+def benchmark(session: Session) -> None:
+    """Perfomance benchmark testing with pytest-benchmark."""
+    session.install(".")
+    session.install("pytest", "typeguard", "pygments", "pytest-benchmark")
+    session.run(
+        "pytest",
+        "--benchmark-json",
+        "benchmark-output.json",
+        "tests/test_convert_char.py",
+        *session.posargs,
+    )
 
 
 @session(python=python_versions)

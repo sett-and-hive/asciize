@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1648247896627,
+  "lastUpdate": 1648258678405,
   "repoUrl": "https://github.com/tomwillis608/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -720,6 +720,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 3.878873831574672e-8",
             "extra": "mean: 369.8906264786163 nsec\nrounds: 135136"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "bot@renovateapp.com",
+            "name": "Renovate Bot",
+            "username": "renovate-bot"
+          },
+          "committer": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "distinct": true,
+          "id": "d0ed1693c200983a84cd07264bcb7357e1571cf7",
+          "message": "Update dependency mypy to ^0.942",
+          "timestamp": "2022-03-26T01:37:10Z",
+          "tree_id": "fed03d4a50b83ce4aad2738364dd7059d6496ad0",
+          "url": "https://github.com/tomwillis608/asciize/commit/d0ed1693c200983a84cd07264bcb7357e1571cf7"
+        },
+        "date": 1648258677980,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 1151281.9067053844,
+            "unit": "iter/sec",
+            "range": "stddev: 1.1824520561065733e-7",
+            "extra": "mean: 868.5969910373153 nsec\nrounds: 98040"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 671856.0917653006,
+            "unit": "iter/sec",
+            "range": "stddev: 1.446023839679934e-7",
+            "extra": "mean: 1.488413980697119 usec\nrounds: 73530"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 608525.591117374,
+            "unit": "iter/sec",
+            "range": "stddev: 1.9899129253217165e-7",
+            "extra": "mean: 1.6433162624497044 usec\nrounds: 116280"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 2683801.990939237,
+            "unit": "iter/sec",
+            "range": "stddev: 1.6024161032615818e-8",
+            "extra": "mean: 372.6057299968044 nsec\nrounds: 133316"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 2022125.8349719308,
+            "unit": "iter/sec",
+            "range": "stddev: 2.06724270212956e-8",
+            "extra": "mean: 494.52906575109455 nsec\nrounds: 99010"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 720591.7575292032,
+            "unit": "iter/sec",
+            "range": "stddev: 1.3611438152116273e-7",
+            "extra": "mean: 1.387748318727436 usec\nrounds: 114943"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 805006.2937447507,
+            "unit": "iter/sec",
+            "range": "stddev: 1.740229861117431e-7",
+            "extra": "mean: 1.242226312726292 usec\nrounds: 135136"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2588938.946892895,
+            "unit": "iter/sec",
+            "range": "stddev: 2.9270655673942172e-8",
+            "extra": "mean: 386.25862583587804 nsec\nrounds: 124985"
           }
         ]
       }

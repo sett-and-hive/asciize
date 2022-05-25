@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1653443941796,
+  "lastUpdate": 1653498055970,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -1760,6 +1760,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 8.807533697988107e-8",
             "extra": "mean: 398.94600508570034 nsec\nrounds: 123457"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "tomwillis608@gmail.com",
+            "name": "Tom Willis",
+            "username": "tomwillis608"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "31e6b781b12055c268ad5ab5fa36ccb92de5808e",
+          "message": "Merge pull request #84 from sett-and-hive/renovate/nox-poetry-1.x\n\nUpdate dependency nox-poetry to v1",
+          "timestamp": "2022-05-25T12:00:03-05:00",
+          "tree_id": "8dcca70164484fbe2133be2028ca65935e263c21",
+          "url": "https://github.com/sett-and-hive/asciize/commit/31e6b781b12055c268ad5ab5fa36ccb92de5808e"
+        },
+        "date": 1653498055535,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 997562.0098215833,
+            "unit": "iter/sec",
+            "range": "stddev: 9.733688456337336e-8",
+            "extra": "mean: 1.0024439485008583 usec\nrounds: 69445"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 585236.0749978813,
+            "unit": "iter/sec",
+            "range": "stddev: 1.633911469876619e-7",
+            "extra": "mean: 1.7087121637257583 usec\nrounds: 87720"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 539531.2771377993,
+            "unit": "iter/sec",
+            "range": "stddev: 2.1470499151518678e-7",
+            "extra": "mean: 1.8534606655335655 usec\nrounds: 109891"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 2348273.097487392,
+            "unit": "iter/sec",
+            "range": "stddev: 1.5980131201862632e-8",
+            "extra": "mean: 425.84484788819145 nsec\nrounds: 114943"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1301657.2143116551,
+            "unit": "iter/sec",
+            "range": "stddev: 1.2851809397955965e-7",
+            "extra": "mean: 768.2514175045861 nsec\nrounds: 185186"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 631550.5494055963,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4399129788988694e-7",
+            "extra": "mean: 1.5834045286496568 usec\nrounds: 83334"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 688506.9628171029,
+            "unit": "iter/sec",
+            "range": "stddev: 1.447747076292496e-7",
+            "extra": "mean: 1.4524181366422042 usec\nrounds: 126583"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2301182.599769054,
+            "unit": "iter/sec",
+            "range": "stddev: 2.0732926000858115e-8",
+            "extra": "mean: 434.55916975060006 nsec\nrounds: 111099"
           }
         ]
       }

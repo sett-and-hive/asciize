@@ -5,23 +5,31 @@ on:
       - main
 
 permissions:
-  # deployments permission to deploy GitHub pages website
-  deployments: write
-  # contents permission to update benchmark contents in gh-pages branch
-  contents: write
+  contents: read
 
 jobs:
   benchmark:
     name: Check performance regeression.
     runs-on: ubuntu-latest
+    permissions:
+      # deployments permission to deploy GitHub pages website
+      deployments: write
+      # contents permission to update benchmark contents in gh-pages branch
+      contents: write
+
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813 # tav=v1.4
+        with:
+          egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
+
       - name: Checkout main branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28 # tag=v3
         with:
           clean: true
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@d09bd5e6005b175076f227b13d9730d56e9dcfcb # tag=v4
         with:
           python-version: "3.9"
 
@@ -35,7 +43,7 @@ jobs:
         run: nox -s benchmark
 
       - name: Store benchmark result in github.io
-        uses: benchmark-action/github-action-benchmark@v1
+        uses: benchmark-action/github-action-benchmark@3b3014adac5e456db8ad428ccc01bec75242487f # tag=v1
         with:
           name: Pytest-Benchmark Benchmark
           tool: 'pytest'

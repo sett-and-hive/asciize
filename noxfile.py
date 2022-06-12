@@ -19,7 +19,7 @@ except ImportError:
 
 
 package = "asciize"
-PYTHON_VERSIONS = ["3.7", "3.9", "3.8"]
+PYTHON_VERSIONS = ["3.9", "3.8", "3.10"]
 PYTHON_CURRENT_VERSION = "3.9"
 nox.options.sessions = (
     "pre-commit",

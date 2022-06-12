@@ -64,6 +64,18 @@ repos:
     -   id: pyupgrade
         args: [--py37-plus]
 
+-   repo: https://github.com/rhysd/actionlint
+    rev: v1.6.13
+    hooks:
+      - id: actionlint-docker
+
+    # -   id: rst
+    #     name: rst
+    #     entry: rst-lint --encoding utf-8
+    #     files: ^(RELEASING.rst|README.rst|TIDELIFT.rst)$
+    #     language: python
+    #     additional_dependencies: [pygments, restructuredtext_lint]
+
 # GitHub CI with pre-commit.ci
 ci:
     autofix_commit_msg: |
@@ -73,5 +85,5 @@ ci:
     autofix_prs: true
     autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
     autoupdate_schedule: weekly
-    skip: []
+    skip: [ actionlint-docker ]
     submodules: false

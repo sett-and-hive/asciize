@@ -28,8 +28,8 @@ Asciize
 .. |pre-commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
    :target: https://github.com/pre-commit/pre-commit
    :alt: pre-commit
-.. |pre-commit-ci| image:: https://results.pre-commit.ci/badge/github/tomwillis608/asciize/main.svg
-   :target: https://results.pre-commit.ci/latest/github/tomwillis608/asciize/main
+.. image:: https://results.pre-commit.ci/badge/github/sett-and-hive/asciize/main.svg
+   :target: https://results.pre-commit.ci/latest/github/sett-and-hive/asciize/main
    :alt: pre-commit.ci status
 .. |Black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black

@@ -21,12 +21,13 @@ jobs:
       - name: Harden Runner
         uses: step-security/harden-runner@cdea734fa57747b9831aa9d6fcb274c5f9669557 # tav=v1.4
         with:
-          egress-policy: block
-          disable-telemetry: true
-          allowed-endpoints: >
-            files.pythonhosted.org:443
-            github.com:443
-            pypi.org:443
+          egress-policy: audit
+          # egress-policy: block
+          # disable-telemetry: true
+          # allowed-endpoints: >
+          #   files.pythonhosted.org:443
+          #   github.com:443
+          #   pypi.org:443
 
       - name: Checkout main branch
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3

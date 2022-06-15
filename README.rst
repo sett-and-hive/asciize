@@ -7,6 +7,8 @@ Asciize
 
 |pre-commit| |Black| |Benchmark|
 
+|pre-commit.ci| |SonarCloud|
+
 .. |PyPI| image:: https://img.shields.io/pypi/v/asciize.svg
    :target: https://pypi.org/project/asciize/
    :alt: PyPI
@@ -37,7 +39,7 @@ Asciize
 .. |Benchmark| image:: https://github.com/sett-and-hive/asciize/actions/workflows/benchmark.yml/badge.svg?branch=main
    :target: https://sett-and-hive.github.io/asciize/dev/bench/
    :alt: Benchmark
-.. |Quality Gate Status| image:: https://sonarcloud.io/api/project_badges/measure?project=sett-and-hive_asciize&metric=alert_status
+.. |SonarCloud| image:: https://sonarcloud.io/api/project_badges/measure?project=sett-and-hive_asciize&metric=alert_status
    :target: https://sonarcloud.io/summary/new_code?id=sett-and-hive_asciize
    :alt: SonarCloud Quality Gate
 

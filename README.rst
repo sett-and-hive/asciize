@@ -19,24 +19,27 @@ Asciize
 .. |Read the Docs| image:: https://img.shields.io/readthedocs/asciize/latest.svg?label=Read%20the%20Docs
    :target: https://asciize.readthedocs.io/
    :alt: Read the documentation at https://asciize.readthedocs.io/
-.. |Tests| image:: https://github.com/tomwillis608/asciize/workflows/Tests/badge.svg
-   :target: https://github.com/tomwillis608/asciize/actions?workflow=Tests
+.. |Tests| image:: https://github.com/sett-and-hive/asciize/workflows/Tests/badge.svg
+   :target: https://github.com/sett-and-hive/asciize/actions?workflow=Tests
    :alt: Tests
-.. |Codecov| image:: https://codecov.io/gh/tomwillis608/asciize/branch/main/graph/badge.svg
-   :target: https://codecov.io/gh/tomwillis608/asciize
+.. |Codecov| image:: https://codecov.io/gh/sett-and-hive/asciize/branch/main/graph/badge.svg
+   :target: https://codecov.io/gh/sett-and-hive/asciize
    :alt: Codecov
 .. |pre-commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
    :target: https://github.com/pre-commit/pre-commit
    :alt: pre-commit
-.. image:: https://results.pre-commit.ci/badge/github/sett-and-hive/asciize/main.svg
+.. |pre-commit.ci| image:: https://results.pre-commit.ci/badge/github/sett-and-hive/asciize/main.svg
    :target: https://results.pre-commit.ci/latest/github/sett-and-hive/asciize/main
    :alt: pre-commit.ci status
 .. |Black| image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black
    :alt: Black
-.. |Benchmark| image:: https://github.com/tomwillis608/asciize/actions/workflows/benchmark.yml/badge.svg?branch=main
-   :target: https://tomwillis608.github.io/asciize/dev/bench/
+.. |Benchmark| image:: https://github.com/sett-and-hive/asciize/actions/workflows/benchmark.yml/badge.svg?branch=main
+   :target: https://sett-and-hive.github.io/asciize/dev/bench/
    :alt: Benchmark
+.. |Quality Gate Status| image:: https://sonarcloud.io/api/project_badges/measure?project=sett-and-hive_asciize&metric=alert_status
+   :target: https://sonarcloud.io/summary/new_code?id=sett-and-hive_asciize
+   :alt: SonarCloud Quality Gate
 
 Commentary
 ----------

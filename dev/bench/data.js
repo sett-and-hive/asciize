@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1655967254408,
+  "lastUpdate": 1656268902214,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -4160,6 +4160,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.584998966986992e-8",
             "extra": "mean: 442.67548570876085 nsec\nrounds: 109891"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "distinct": true,
+          "id": "6b447cca234eb6f38164499da2576e9d25c15fb3",
+          "message": "Update pre-commit hook rhysd/actionlint to v1.6.14",
+          "timestamp": "2022-06-26T18:40:48Z",
+          "tree_id": "0fa93ef9f9681b853b41c9dbe7cfbe31bc5f72cc",
+          "url": "https://github.com/sett-and-hive/asciize/commit/6b447cca234eb6f38164499da2576e9d25c15fb3"
+        },
+        "date": 1656268901642,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 1001454.5194231306,
+            "unit": "iter/sec",
+            "range": "stddev: 5.820514577221245e-7",
+            "extra": "mean: 998.5475931308708 nsec\nrounds: 80001"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 570777.2776532001,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4628513152673306e-7",
+            "extra": "mean: 1.751996863140008 usec\nrounds: 78741"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 536084.4585232616,
+            "unit": "iter/sec",
+            "range": "stddev: 1.793701330768684e-7",
+            "extra": "mean: 1.8653777107336313 usec\nrounds: 106383"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 2388725.626208094,
+            "unit": "iter/sec",
+            "range": "stddev: 1.757800095371354e-8",
+            "extra": "mean: 418.6332616137766 nsec\nrounds: 113637"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1759359.999750819,
+            "unit": "iter/sec",
+            "range": "stddev: 2.816212541941481e-7",
+            "extra": "mean: 568.3885049915407 nsec\nrounds: 87712"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 615145.3579798293,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4119186488585956e-7",
+            "extra": "mean: 1.625632034815404 usec\nrounds: 92593"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 688944.3671261049,
+            "unit": "iter/sec",
+            "range": "stddev: 2.259690960288736e-7",
+            "extra": "mean: 1.451496010006508 usec\nrounds: 133334"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2391550.6088168644,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4431291965888756e-8",
+            "extra": "mean: 418.13875747135774 nsec\nrounds: 114943"
           }
         ]
       }

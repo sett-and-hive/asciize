@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1656761669379,
+  "lastUpdate": 1656769427342,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -4880,6 +4880,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.7303374656703982e-8",
             "extra": "mean: 416.35586612222914 nsec\nrounds: 119048"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "distinct": true,
+          "id": "6c3d54ce22393cf7664265c3c15b9c3f9fc6e894",
+          "message": "Update pre-commit hook asottile/reorder_python_imports to v3.2.0",
+          "timestamp": "2022-07-02T13:42:50Z",
+          "tree_id": "effcf169b20985d7acc8e1adff70925a85f5175e",
+          "url": "https://github.com/sett-and-hive/asciize/commit/6c3d54ce22393cf7664265c3c15b9c3f9fc6e894"
+        },
+        "date": 1656769426819,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 1006916.3682071615,
+            "unit": "iter/sec",
+            "range": "stddev: 1.1198766922942663e-7",
+            "extra": "mean: 993.1311393621734 nsec\nrounds: 76331"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 605103.4586959127,
+            "unit": "iter/sec",
+            "range": "stddev: 1.7320862186294743e-7",
+            "extra": "mean: 1.65260995558536 usec\nrounds: 81301"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 552090.541531085,
+            "unit": "iter/sec",
+            "range": "stddev: 1.9547854204238831e-7",
+            "extra": "mean: 1.8112971057731764 usec\nrounds: 106383"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 1693358.6769489846,
+            "unit": "iter/sec",
+            "range": "stddev: 1.424628873190268e-7",
+            "extra": "mean: 590.5423426310093 nsec\nrounds: 196079"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1768937.315689196,
+            "unit": "iter/sec",
+            "range": "stddev: 1.7045996165821626e-8",
+            "extra": "mean: 565.3111566645979 nsec\nrounds: 86957"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 625837.6330364356,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4959541781425297e-7",
+            "extra": "mean: 1.5978585294530874 usec\nrounds: 99010"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 687125.2581131186,
+            "unit": "iter/sec",
+            "range": "stddev: 1.3644553653284142e-7",
+            "extra": "mean: 1.4553387292821274 usec\nrounds: 105264"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2389659.6222143797,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4391674493728187e-8",
+            "extra": "mean: 418.4696392338996 nsec\nrounds: 116280"
           }
         ]
       }

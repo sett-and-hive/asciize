@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1656468302503,
+  "lastUpdate": 1656728257237,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -4640,6 +4640,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 2.2445619187874633e-8",
             "extra": "mean: 441.6489101107491 nsec\nrounds: 111112"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "distinct": true,
+          "id": "7ca1ee8c7bd8cb70036306ae3071c28ef3f46927",
+          "message": "Update step-security/harden-runner digest to b7dfd5c",
+          "timestamp": "2022-07-02T02:16:37Z",
+          "tree_id": "4014a37d69f0322636cb00c5743fe1e170095ac6",
+          "url": "https://github.com/sett-and-hive/asciize/commit/7ca1ee8c7bd8cb70036306ae3071c28ef3f46927"
+        },
+        "date": 1656728256227,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 963601.2731670155,
+            "unit": "iter/sec",
+            "range": "stddev: 1.5534323213514777e-7",
+            "extra": "mean: 1.0377736392080041 usec\nrounds: 84034"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 578418.5472625932,
+            "unit": "iter/sec",
+            "range": "stddev: 1.7118941309741345e-7",
+            "extra": "mean: 1.7288518923408853 usec\nrounds: 86957"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 521973.36530483543,
+            "unit": "iter/sec",
+            "range": "stddev: 1.3965594507710314e-7",
+            "extra": "mean: 1.9158065649882237 usec\nrounds: 114943"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 2262139.843518504,
+            "unit": "iter/sec",
+            "range": "stddev: 1.668881261579742e-8",
+            "extra": "mean: 442.059319570865 nsec\nrounds: 108696"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1632716.9461215418,
+            "unit": "iter/sec",
+            "range": "stddev: 2.2299181892583396e-8",
+            "extra": "mean: 612.4760341193495 nsec\nrounds: 81301"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 596336.4048142795,
+            "unit": "iter/sec",
+            "range": "stddev: 1.5584924287237941e-7",
+            "extra": "mean: 1.676905840272213 usec\nrounds: 114943"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 675644.5098599723,
+            "unit": "iter/sec",
+            "range": "stddev: 1.3971338377158035e-7",
+            "extra": "mean: 1.4800682687516407 usec\nrounds: 175439"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2254634.6582400994,
+            "unit": "iter/sec",
+            "range": "stddev: 1.5495677092847975e-8",
+            "extra": "mean: 443.53083828684186 nsec\nrounds: 109891"
           }
         ]
       }

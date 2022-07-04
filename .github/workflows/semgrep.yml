@@ -41,10 +41,17 @@ jobs:
       run: semgrep ci
       env:
           # Select rules for your scan with one of these two options.
+          # These options are EXCLUSIVE
           # Option 1: Scan with rules set in Semgrep App's rule board
           # Make a token at semgrep.dev/orgs/-/settings/tokens, and then
           # save it in your GitHub Secrets.
-          SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+          # SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
           # Option 2: Set hard-coded rulesets, viewable in logs.
           # SEMGREP_RULES: p/default # more at semgrep.dev/explore
-          SEMGREP_RULES: p/ci
+          SEMGREP_RULES: >-
+            p/r2c-ci
+            p/python
+            p/secrets
+            p/owasp-top-ten
+            p/r2c-security-audit
+            p/insecure-transport

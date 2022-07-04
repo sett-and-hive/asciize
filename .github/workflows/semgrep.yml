@@ -1,0 +1,39 @@
+# .github/workflows/semgrep.yml
+# Run semgrep SAST - Static Appliction Security Testing
+
+name: Semgrep
+on: 
+  push:
+  workflow_dispatch:
+
+# permissions:
+#   contents: read
+
+jobs:
+  tests:
+    name: "Semgrep scan"
+    runs-on: ubuntu-latest
+    container:
+      image: returntocorp/semgrep@latest # tag=v1
+      
+    steps:
+  
+    - name: Harden Runner
+      uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813 # tag=v1.4
+      with:
+        egress-policy: audit
+        # egress-policy: block
+        # disable-telemetry: true
+        # allowed-endpoints: >
+        #   files.pythonhosted.org:443
+        #   github.com:443
+        #   pypi.org:443
+
+    - name: "Checkout"
+      uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
+      with:
+        clean: true
+
+    - name: "Run semgrep scan"
+      run: semgrep ci
+

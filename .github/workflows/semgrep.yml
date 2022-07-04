@@ -1,0 +1,57 @@
+# .github/workflows/semgrep.yml
+# Run semgrep SAST - Static Appliction Security Testing
+
+name: Semgrep
+on:
+  push:
+  workflow_dispatch:
+
+# permissions:
+#   contents: read
+
+jobs:
+  tests:
+    name: Semgrep
+    runs-on: ubuntu-latest
+    container:
+      image: returntocorp/semgrep:sha-437101c # tag=v1
+    # Skip any PR created by dependabot to avoid permission issues
+    if: (github.actor != 'dependabot[bot]')
+
+    steps:
+
+    - name: Harden Runner
+      uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813 # tag=v1.4
+      with:
+        egress-policy: audit
+        disable-telemetry: false
+        # egress-policy: block
+        # disable-telemetry: true
+        # allowed-endpoints: >
+        #   files.pythonhosted.org:443
+        #   github.com:443
+        #   pypi.org:443
+
+    - name: "Checkout"
+      uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
+      with:
+        clean: true
+
+    - name: "Run semgrep scan"
+      run: semgrep ci
+      env:
+          # Select rules for your scan with one of these two options.
+          # These options are EXCLUSIVE
+          # Option 1: Scan with rules set in Semgrep App's rule board
+          # Make a token at semgrep.dev/orgs/-/settings/tokens, and then
+          # save it in your GitHub Secrets.
+          # SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
+          # Option 2: Set hard-coded rulesets, viewable in logs.
+          # SEMGREP_RULES: p/default # more at semgrep.dev/explore
+          SEMGREP_RULES: >-
+            p/r2c-ci
+            p/python
+            p/secrets
+            p/owasp-top-ten
+            p/r2c-security-audit
+            p/insecure-transport

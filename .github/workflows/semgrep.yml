@@ -2,7 +2,7 @@
 # Run semgrep SAST - Static Appliction Security Testing
 
 name: Semgrep
-on: 
+on:
   push:
   workflow_dispatch:
 
@@ -15,13 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: returntocorp/semgrep@latest # tag=v1
-      
+
     steps:
-  
+
     - name: Harden Runner
       uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813 # tag=v1.4
       with:
         egress-policy: audit
+        disable-telemetry: false
         # egress-policy: block
         # disable-telemetry: true
         # allowed-endpoints: >
@@ -36,4 +37,3 @@ jobs:
 
     - name: "Run semgrep scan"
       run: semgrep ci
-

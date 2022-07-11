@@ -33,7 +33,7 @@ repos:
     -   id: autopep8
 
 -   repo: https://github.com/asottile/reorder_python_imports
-    rev: v3.3.0
+    rev: v3.8.1
     hooks:
     -   id: reorder-python-imports
 
@@ -59,7 +59,7 @@ repos:
 #     -   id: markdown-link-check
 
 -   repo: https://github.com/asottile/pyupgrade
-    rev: v2.34.0
+    rev: v2.37.1
     hooks:
     -   id: pyupgrade
         args: [--py37-plus]
@@ -77,7 +77,7 @@ repos:
     #     additional_dependencies: [pygments, restructuredtext_lint]
 
 -   repo: https://github.com/returntocorp/semgrep
-    rev: 'v0.102.0'
+    rev: 'v0.103.0'
     hooks:
       - id: semgrep
     # See semgrep.dev/rulesets to select a ruleset and copy its URL

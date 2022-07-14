@@ -76,18 +76,23 @@ repos:
     #     language: python
     #     additional_dependencies: [pygments, restructuredtext_lint]
 
--   repo: https://github.com/returntocorp/semgrep
-    rev: 'v0.103.0'
+# -   repo: https://github.com/returntocorp/semgrep
+#     rev: 'v0.102.0'
+#     hooks:
+#       - id: semgrep
+#     # See semgrep.dev/rulesets to select a ruleset and copy its URL
+#         args: ['--config', 'p/r2c-ci',
+#             '--config', 'p/python',
+#             '--config', 'p/secrets',
+#             '--config', 'p/owasp-top-ten',
+#             '--config', 'p/r2c-security-audit',
+#             '--config', 'p/insecure-transport',
+#             '--error', '--skip-unknown-extensions']
+
+-   repo: https://github.com/pre-commit-ci/pre-commit-ci-config
+    rev: v1.5.1
     hooks:
-      - id: semgrep
-    # See semgrep.dev/rulesets to select a ruleset and copy its URL
-        args: ['--config', 'p/r2c-ci',
-            '--config', 'p/python',
-            '--config', 'p/secrets',
-            '--config', 'p/owasp-top-ten',
-            '--config', 'p/r2c-security-audit',
-            '--config', 'p/insecure-transport',
-            '--error', '--skip-unknown-extensions']
+    -   id: check-pre-commit-ci-config
 
 # GitHub CI with pre-commit.ci
 ci:
@@ -98,5 +103,5 @@ ci:
     autofix_prs: true
     autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
     autoupdate_schedule: weekly
-    skip: [ actionlint-docker, semgrep ]
+    skip: [ actionlint-docker ]
     submodules: false

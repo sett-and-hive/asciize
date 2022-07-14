@@ -89,6 +89,11 @@ repos:
             '--config', 'p/insecure-transport',
             '--error', '--skip-unknown-extensions']
 
+-   repo: https://github.com/pre-commit-ci/pre-commit-ci-config
+    rev: v1.5.1
+    hooks:
+    -   id: check-pre-commit-ci-config
+
 # GitHub CI with pre-commit.ci
 ci:
     autofix_commit_msg: |

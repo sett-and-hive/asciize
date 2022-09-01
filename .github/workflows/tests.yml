@@ -49,8 +49,7 @@ jobs:
     - run: pip install poetry==1.2.0
     - run: pip install nox-poetry==1.0.1
 
-    - name: "Run nox"
-      run: nox
+    - run: nox -p ${{ matrix.python-version }}
 
     - name: "Post to codecov.io"
       if: "contains(env.USING_COVERAGE, matrix.python-version)"

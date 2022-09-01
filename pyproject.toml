@@ -5,8 +5,8 @@ description = "Asciize"
 authors = ["Tom Willis <no-reply@example.com>"]
 license = "Apache-2.0"
 readme = "README.rst"
-homepage = "https://github.com/tomwillis608/asciize"
-repository = "https://github.com/tomwillis608/asciize"
+homepage = "https://github.com/sett-and-hive/asciize"
+repository = "https://github.com/sett-and-hive/asciize"
 documentation = "https://asciize.readthedocs.io"
 classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules"

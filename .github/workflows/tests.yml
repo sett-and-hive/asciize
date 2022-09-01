@@ -40,7 +40,7 @@ jobs:
         clean: true
 
     - name: "Python setup"
-      uses: actions/setup-python@v1 # tag=v1
+      uses: actions/setup-python@152ba7c4dd6521b8e9c93f72d362ce03bf6c4f20 # tag=v1
       with:
         python-version: ${{ matrix.python-version }}
         architecture: x64

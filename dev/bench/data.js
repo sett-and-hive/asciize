@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1662070862016,
+  "lastUpdate": 1662073075689,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -6960,6 +6960,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.7184576825326205e-8",
             "extra": "mean: 455.5512308552769 nsec\nrounds: 107527"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "tomwillis608@gmail.com",
+            "name": "Tom Willis",
+            "username": "tomwillis608"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "78880e11aa7d82c9d236f9b34e44ac22e056f3de",
+          "message": "Merge pull request #169 from sett-and-hive/tom-update-pre-comit\n\nUpdate pre-commit to fix flake8-bugbear so Python 3.9 CI works",
+          "timestamp": "2022-09-01T17:56:44-05:00",
+          "tree_id": "7d2656d94db0f9c254ac48b75720ef378c76c420",
+          "url": "https://github.com/sett-and-hive/asciize/commit/78880e11aa7d82c9d236f9b34e44ac22e056f3de"
+        },
+        "date": 1662073073545,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 796575.5627281663,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000005128032719864868",
+            "extra": "mean: 1.2553736855485895 usec\nrounds: 66663"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 496523.1496984445,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000005835294426639845",
+            "extra": "mean: 2.014004786297143 usec\nrounds: 51814"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 398184.71039244044,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00002314598975287932",
+            "extra": "mean: 2.5113972834728537 usec\nrounds: 101011"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 1750551.988986617,
+            "unit": "iter/sec",
+            "range": "stddev: 9.245001909555585e-7",
+            "extra": "mean: 571.2483869611116 nsec\nrounds: 96154"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1306397.7412993396,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000017662454146068232",
+            "extra": "mean: 765.4636627014625 nsec\nrounds: 70418"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 498085.04139269807,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000004184432492779092",
+            "extra": "mean: 2.0076892837494076 usec\nrounds: 59881"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 533169.7662573444,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00001652213734040093",
+            "extra": "mean: 1.8755752169138022 usec\nrounds: 129871"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 1784161.7951660387,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001078488011891184",
+            "extra": "mean: 560.4872846786793 nsec\nrounds: 89286"
           }
         ]
       }

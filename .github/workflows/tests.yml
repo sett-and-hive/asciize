@@ -39,10 +39,17 @@ jobs:
       with:
         clean: true
 
-    - name: "Setup nox"
-      uses: excitedleigh/setup-nox@38c698655f40d5fe659b8589764ed04ee36d0414 # tag=v2.0.0
+    - name: "Python setup"
+      uses: actions/setup-python@v1 # tag=v1
+      with:
+        python-version: ${{ matrix.python-version }}
+        architecture: x64
 
-    - run: nox
+    - run: pip install nox==2019.11.9
+    - run: pip install poetry==1.0.5
+
+    - name: "Run nox"
+      run: nox
 
     - name: "Post to codecov.io"
       if: "contains(env.USING_COVERAGE, matrix.python-version)"

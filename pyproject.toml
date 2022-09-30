@@ -16,7 +16,7 @@ classifiers = [
 Changelog = "https://github.com/tomwillis608/asciize/releases"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 click = "^8.0"
 
 [tool.poetry.dev-dependencies]

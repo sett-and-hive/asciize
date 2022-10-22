@@ -23,7 +23,7 @@ except ImportError:
 
 
 package = "asciize"
-python_versions = ["3.10", "3.9", "3.8", "3.7"]
+python_versions = ["3.10", "3.9", "3.8"]
 nox.needs_version = ">= 2021.6.6"
 nox.options.sessions = (
     "pre-commit",
@@ -183,11 +183,30 @@ def coverage(session: Session) -> None:
 
 
 @session(python=python_versions[0])
+def benchmark(session: Session) -> None:
+    """Perfomance benchmark testing with pytest-benchmark."""
+    session.install(".")
+    session.install("pytest", "typeguard", "pygments", "pytest-benchmark")
+    session.run(
+        "pytest",
+        "--benchmark-json",
+        "benchmark-output.json",
+        "tests/test_convert_char.py",
+        *session.posargs,
+    )
+
+
+@session(python=python_versions[0])
 def typeguard(session: Session) -> None:
     """Runtime type checking using Typeguard."""
     session.install(".")
-    session.install("pytest", "typeguard", "pygments")
-    session.run("pytest", f"--typeguard-packages={package}", *session.posargs)
+    session.install("pytest", "typeguard", "pygments", "pytest-benchmark")
+    session.run(
+        "pytest",
+        "--benchmark-disable",
+        f"--typeguard-packages={package}",
+        *session.posargs,
+    )
 
 
 @session(python=python_versions)

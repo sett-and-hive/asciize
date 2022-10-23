@@ -25,7 +25,7 @@ black = ">=21.10b0"
 coverage = {extras = ["toml"], version = ">=6.3.2"}
 darglint = ">=1.8.1"
 mccabe = ">=0.7.0,<0.8.0"
-flake8 = "=5.0.0"
+flake8 = "=5.0.4"
 flake8-bandit = ">=4.0.0"
 flake8-bugbear = ">=22.0.0"
 flake8-docstrings = ">=1.6.0"

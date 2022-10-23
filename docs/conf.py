@@ -1,14 +1,12 @@
 """Sphinx configuration."""
-from datetime import datetime
-
 project = "Asciize"
 author = "Tom Willis"
-copyright = f"{datetime.now().year}, {author}"
+copyright = "2022, Tom Willis"
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx_click",
-    "sphinx_rtd_theme",
+    "myst_parser",
 ]
 autodoc_typehints = "description"
-html_theme = "sphinx_rtd_theme"
+html_theme = "furo"

@@ -6,7 +6,7 @@ from asciize.entities.convert_character import character_conversion
 
 
 @click.command()
-@click.version_option()
+# @click.version_option()
 # @click.option("-f", "--file", required=False, help="File to asciize. Not implemented")
 @click.argument("string_argument", nargs=-1)  # String to asciize
 def main(string_argument: Any) -> None:
@@ -24,5 +24,5 @@ def _print_help() -> None:
     ctx.exit()
 
 
-if __name__ == "__main__":
-    main(prog_name="asciize")  # pragma: no cover
+if __name__ == "__main__":  # pragma: no mutate
+    main(prog_name="asciize")  # pragma: no cover no mutate

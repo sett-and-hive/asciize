@@ -49,7 +49,7 @@ def convert_multiple_latins(input_string: str) -> str:
             if "LATIN" not in name:
                 raise ValueError
             if "SHARP" in name:
-                chars = "".join([ch * 2 for ch in chars])
+                chars = "".join([chars[0] * 2])
             if "SMALL" in name:
                 chars = chars.lower()
             return chars

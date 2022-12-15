@@ -132,3 +132,9 @@ discovery.txt
 # Benchmarking with pytest-benchmark
 benchmark-output.json
 bin/act
+
+# mutation testing
+.mutmut-cache
+html/index.html
+html/src/asciize/__main__.py.html
+html/src/asciize/entities/convert_character.py.html

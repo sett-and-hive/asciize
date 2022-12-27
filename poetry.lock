@@ -22,7 +22,7 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 
 [[package]]
 name = "babel"
-version = "2.11.0"
+version = "2.10.3"
 description = "Internationalization utilities"
 category = "dev"
 optional = false
@@ -67,7 +67,7 @@ lxml = ["lxml"]
 
 [[package]]
 name = "black"
-version = "22.12.0"
+version = "22.10.0"
 description = "The uncompromising code formatter."
 category = "dev"
 optional = false
@@ -89,7 +89,7 @@ uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
 name = "certifi"
-version = "2022.12.7"
+version = "2022.9.24"
 description = "Python package for providing Mozilla's CA Bundle."
 category = "dev"
 optional = false
@@ -135,11 +135,11 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
 name = "colorama"
-version = "0.4.6"
+version = "0.4.5"
 description = "Cross-platform colored terminal text."
 category = "main"
 optional = false
-python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "coverage"
@@ -196,27 +196,16 @@ pipenv = ["pipenv"]
 conda = ["pyyaml"]
 
 [[package]]
-name = "exceptiongroup"
-version = "1.0.4"
-description = "Backport of PEP 654 (exception groups)"
-category = "dev"
-optional = false
-python-versions = ">=3.7"
-
-[package.extras]
-test = ["pytest (>=6)"]
-
-[[package]]
 name = "filelock"
-version = "3.8.2"
+version = "3.8.0"
 description = "A platform independent file lock."
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 
 [package.extras]
-docs = ["furo (>=2022.9.29)", "sphinx (>=5.3)", "sphinx-autodoc-typehints (>=1.19.5)"]
-testing = ["covdefaults (>=2.2.2)", "coverage (>=6.5)", "pytest (>=7.2)", "pytest-cov (>=4)", "pytest-timeout (>=2.1)"]
+docs = ["furo (>=2022.6.21)", "sphinx (>=5.1.1)", "sphinx-autodoc-typehints (>=1.19.1)"]
+testing = ["covdefaults (>=2.2)", "coverage (>=6.4.2)", "pytest (>=7.1.2)", "pytest-cov (>=3)", "pytest-timeout (>=2.1)"]
 
 [[package]]
 name = "flake8"
@@ -245,18 +234,18 @@ flake8 = ">=5.0.0"
 
 [[package]]
 name = "flake8-bugbear"
-version = "22.12.6"
+version = "22.9.23"
 description = "A plugin for flake8 finding likely bugs and design problems in your program. Contains warnings that don't belong in pyflakes and pycodestyle."
 category = "dev"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.6"
 
 [package.dependencies]
 attrs = ">=19.2.0"
 flake8 = ">=3.0.0"
 
 [package.extras]
-dev = ["tox", "coverage", "hypothesis", "hypothesmith (>=0.2)", "pre-commit"]
+dev = ["coverage", "hypothesis", "hypothesmith (>=0.2)", "pre-commit"]
 
 [[package]]
 name = "flake8-docstrings"
@@ -272,23 +261,20 @@ pydocstyle = ">=2.1"
 
 [[package]]
 name = "flake8-rst-docstrings"
-version = "0.3.0"
-description = "Python docstring reStructuredText (RST) validator for flake8"
+version = "0.2.7"
+description = "Python docstring reStructuredText (RST) validator"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
-flake8 = ">=3"
+flake8 = ">=3.0.0"
 pygments = "*"
 restructuredtext-lint = "*"
 
-[package.extras]
-develop = ["build", "twine"]
-
 [[package]]
 name = "furo"
-version = "2022.12.7"
+version = "2022.9.29"
 description = "A clean customisable Sphinx documentation theme."
 category = "dev"
 optional = false
@@ -297,16 +283,16 @@ python-versions = ">=3.7"
 [package.dependencies]
 beautifulsoup4 = "*"
 pygments = ">=2.7"
-sphinx = ">=5.0,<7.0"
+sphinx = ">=4.0,<6.0"
 sphinx-basic-ng = "*"
 
 [[package]]
 name = "gitdb"
-version = "4.0.10"
+version = "4.0.9"
 description = "Git Object Database"
 category = "dev"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.6"
 
 [package.dependencies]
 smmap = ">=3.0.1,<6"
@@ -324,7 +310,7 @@ gitdb = ">=4.0.1,<5"
 
 [[package]]
 name = "identify"
-version = "2.5.9"
+version = "2.5.6"
 description = "File identification library for Python"
 category = "dev"
 optional = false
@@ -351,7 +337,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "importlib-metadata"
-version = "5.1.0"
+version = "5.0.0"
 description = "Read metadata from Python packages"
 category = "dev"
 optional = false
@@ -363,7 +349,7 @@ zipp = ">=0.5"
 [package.extras]
 docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "furo", "jaraco.tidelift (>=1.4)"]
 perf = ["ipython"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-cov", "pytest-enabler (>=1.3)", "packaging", "pyfakefs", "flufl.flake8", "pytest-perf (>=0.9.2)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "pytest-flake8", "importlib-resources (>=1.3)"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 (<5)", "pytest-cov", "pytest-enabler (>=1.3)", "packaging", "pyfakefs", "flufl.flake8", "pytest-perf (>=0.9.2)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "importlib-resources (>=1.3)"]
 
 [[package]]
 name = "iniconfig"
@@ -438,7 +424,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "mdit-py-plugins"
-version = "0.3.3"
+version = "0.3.1"
 description = "Collection of plugins for markdown-it-py"
 category = "dev"
 optional = false
@@ -448,9 +434,9 @@ python-versions = ">=3.7"
 markdown-it-py = ">=1.0.0,<3.0.0"
 
 [package.extras]
+testing = ["pytest-regressions", "pytest-cov", "pytest", "coverage"]
+rtd = ["sphinx-book-theme (>=0.1.0,<0.2.0)", "myst-parser (>=0.16.1,<0.17.0)", "attrs"]
 code_style = ["pre-commit"]
-rtd = ["attrs", "myst-parser (>=0.16.1,<0.17.0)", "sphinx-book-theme (>=0.1.0,<0.2.0)"]
-testing = ["coverage", "pytest", "pytest-cov", "pytest-regressions"]
 
 [[package]]
 name = "mdurl"
@@ -462,7 +448,7 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "mypy"
-version = "0.991"
+version = "0.982"
 description = "Optional static typing for Python"
 category = "dev"
 optional = false
@@ -475,7 +461,6 @@ typing-extensions = ">=3.10"
 
 [package.extras]
 dmypy = ["psutil (>=4.0)"]
-install-types = ["pip"]
 python2 = ["typed-ast (>=1.4.0,<2)"]
 reports = ["lxml"]
 
@@ -531,7 +516,7 @@ pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
 
 [[package]]
 name = "pathspec"
-version = "0.10.3"
+version = "0.10.1"
 description = "Utility library for gitignore style pattern matching of file paths."
 category = "dev"
 optional = false
@@ -558,15 +543,15 @@ flake8 = ">=3.9.1"
 
 [[package]]
 name = "platformdirs"
-version = "2.6.0"
-description = "A small Python package for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
+version = "2.5.2"
+description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 
 [package.extras]
-docs = ["furo (>=2022.9.29)", "proselint (>=0.13)", "sphinx-autodoc-typehints (>=1.19.4)", "sphinx (>=5.3)"]
-test = ["appdirs (==1.4.4)", "pytest-cov (>=4)", "pytest-mock (>=3.10)", "pytest (>=7.2)"]
+docs = ["furo (>=2021.7.5b38)", "proselint (>=0.10.2)", "sphinx-autodoc-typehints (>=1.12)", "sphinx (>=4)"]
+test = ["appdirs (==1.4.4)", "pytest-cov (>=2.7)", "pytest-mock (>=3.6)", "pytest (>=6)"]
 
 [[package]]
 name = "pluggy"
@@ -598,7 +583,7 @@ virtualenv = ">=20.0.8"
 
 [[package]]
 name = "pre-commit-hooks"
-version = "4.4.0"
+version = "4.3.0"
 description = "Some out-of-the-box hooks for pre-commit."
 category = "dev"
 optional = false
@@ -609,9 +594,17 @@ python-versions = ">=3.7"
 tomli = {version = ">=1.1.0", markers = "python_version < \"3.11\""}
 
 [[package]]
+name = "py"
+version = "1.11.0"
+description = "library with cross-python path, ini-parsing, io, code, log facilities"
+category = "dev"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
 name = "py-cpuinfo"
-version = "9.0.0"
-description = "Get CPU info with pure Python"
+version = "8.0.0"
+description = "Get CPU info with pure Python 2 & 3"
 category = "dev"
 optional = false
 python-versions = "*"
@@ -692,7 +685,7 @@ diagrams = ["railroad-diagrams", "jinja2"]
 
 [[package]]
 name = "pytest"
-version = "7.2.0"
+version = "7.1.3"
 description = "pytest: simple powerful testing with Python"
 category = "dev"
 optional = false
@@ -701,11 +694,11 @@ python-versions = ">=3.7"
 [package.dependencies]
 attrs = ">=19.2.0"
 colorama = {version = "*", markers = "sys_platform == \"win32\""}
-exceptiongroup = {version = ">=1.0.0rc8", markers = "python_version < \"3.11\""}
 iniconfig = "*"
 packaging = "*"
 pluggy = ">=0.12,<2.0"
-tomli = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
+py = ">=1.8.2"
+tomli = ">=1.0.0"
 
 [package.extras]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
@@ -743,7 +736,7 @@ pytest = "*"
 
 [[package]]
 name = "pytz"
-version = "2022.6"
+version = "2022.5"
 description = "World timezone definitions, modern and historical"
 category = "dev"
 optional = false
@@ -751,7 +744,7 @@ python-versions = "*"
 
 [[package]]
 name = "pyupgrade"
-version = "3.3.1"
+version = "3.1.0"
 description = "A tool to automatically upgrade syntax for newer versions."
 category = "dev"
 optional = false
@@ -770,7 +763,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "reorder-python-imports"
-version = "3.9.0"
+version = "3.8.5"
 description = "Tool for reordering python imports"
 category = "dev"
 optional = false
@@ -833,7 +826,7 @@ python-versions = ">=3.5"
 
 [[package]]
 name = "safety"
-version = "2.3.5"
+version = "2.3.1"
 description = "Checks installed dependencies for known vulnerabilities and licenses."
 category = "dev"
 optional = false
@@ -842,7 +835,7 @@ python-versions = "*"
 [package.dependencies]
 Click = ">=8.0.2"
 dparse = ">=0.6.2"
-packaging = ">=21.0,<22.0"
+packaging = ">=21.0"
 requests = "*"
 "ruamel.yaml" = ">=0.17.21"
 
@@ -946,7 +939,7 @@ docs = ["furo", "myst-parser", "sphinx-copybutton", "sphinx-inline-tabs", "ipyth
 
 [[package]]
 name = "sphinx-click"
-version = "4.4.0"
+version = "4.3.0"
 description = "Sphinx extension that automatically documents click applications"
 category = "dev"
 optional = false
@@ -1030,7 +1023,7 @@ test = ["pytest"]
 
 [[package]]
 name = "stevedore"
-version = "4.1.1"
+version = "4.1.0"
 description = "Manage dynamic plugins for Python applications"
 category = "dev"
 optional = false
@@ -1093,11 +1086,11 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "urllib3"
-version = "1.26.13"
+version = "1.26.12"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 category = "dev"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*, <4"
 
 [package.extras]
 brotli = ["brotlicffi (>=0.8.0)", "brotli (>=1.0.9)", "brotlipy (>=0.6.0)"]
@@ -1106,19 +1099,19 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "virtualenv"
-version = "20.17.1"
+version = "20.16.5"
 description = "Virtual Python Environment builder"
 category = "dev"
 optional = false
 python-versions = ">=3.6"
 
 [package.dependencies]
-distlib = ">=0.3.6,<1"
+distlib = ">=0.3.5,<1"
 filelock = ">=3.4.1,<4"
 platformdirs = ">=2.4,<3"
 
 [package.extras]
-docs = ["proselint (>=0.13)", "sphinx (>=5.3)", "sphinx-argparse (>=0.3.2)", "sphinx-rtd-theme (>=1)", "towncrier (>=22.8)"]
+docs = ["proselint (>=0.13)", "sphinx (>=5.1.1)", "sphinx-argparse (>=0.3.1)", "sphinx-rtd-theme (>=1)", "towncrier (>=21.9)"]
 testing = ["coverage (>=6.2)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7)", "packaging (>=21.3)", "pytest (>=7.0.1)", "pytest-env (>=0.6.2)", "pytest-freezegun (>=0.4.2)", "pytest-mock (>=3.6.1)", "pytest-randomly (>=3.10.3)", "pytest-timeout (>=2.1)"]
 
 [[package]]
@@ -1147,7 +1140,7 @@ all-strict = ["ipykernel (==6.0.0)", "IPython (==7.23.1)", "jupyter-client (==7.
 
 [[package]]
 name = "zipp"
-version = "3.11.0"
+version = "3.9.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 category = "dev"
 optional = false
@@ -1155,7 +1148,7 @@ python-versions = ">=3.7"
 
 [package.extras]
 docs = ["sphinx (>=3.5)", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "furo", "jaraco.tidelift (>=1.4)"]
-testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-cov", "pytest-enabler (>=1.3)", "jaraco.itertools", "func-timeout", "jaraco.functools", "more-itertools", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "pytest-flake8"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 (<5)", "pytest-cov", "pytest-enabler (>=1.3)", "jaraco.itertools", "func-timeout", "jaraco.functools", "more-itertools", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)"]
 
 [metadata]
 lock-version = "1.1"
@@ -1195,7 +1188,6 @@ darglint = [
 distlib = []
 docutils = []
 dparse = []
-exceptiongroup = []
 filelock = []
 flake8 = []
 flake8-bandit = []
@@ -1206,7 +1198,10 @@ flake8-docstrings = [
 ]
 flake8-rst-docstrings = []
 furo = []
-gitdb = []
+gitdb = [
+    {file = "gitdb-4.0.9-py3-none-any.whl", hash = "sha256:8033ad4e853066ba6ca92050b9df2f89301b8fc8bf7e9324d412a63f8bf1a8fd"},
+    {file = "gitdb-4.0.9.tar.gz", hash = "sha256:bac2fd45c0a1c9cf619e63a90d62bdc63892ef92387424b855792a6cabe789aa"},
+]
 gitpython = []
 identify = []
 idna = []
@@ -1283,14 +1278,26 @@ packaging = [
 pathspec = []
 pbr = []
 pep8-naming = []
-platformdirs = []
+platformdirs = [
+    {file = "platformdirs-2.5.2-py3-none-any.whl", hash = "sha256:027d8e83a2d7de06bbac4e5ef7e023c02b863d7ea5d079477e722bb41ab25788"},
+    {file = "platformdirs-2.5.2.tar.gz", hash = "sha256:58c8abb07dcb441e6ee4b11d8df0ac856038f944ab98b7be6b27b2a3c7feef19"},
+]
 pluggy = [
     {file = "pluggy-1.0.0-py2.py3-none-any.whl", hash = "sha256:74134bbf457f031a36d68416e1509f34bd5ccc019f0bcc952c7b909d06b37bd3"},
     {file = "pluggy-1.0.0.tar.gz", hash = "sha256:4224373bacce55f955a878bf9cfa763c1e360858e330072059e10bad68531159"},
 ]
 pre-commit = []
-pre-commit-hooks = []
-py-cpuinfo = []
+pre-commit-hooks = [
+    {file = "pre_commit_hooks-4.3.0-py2.py3-none-any.whl", hash = "sha256:9ccaf7c98794659d345080ee1ea0256a55ae059675045eebdbbc17c0be8c7e4b"},
+    {file = "pre_commit_hooks-4.3.0.tar.gz", hash = "sha256:fda598a4c834d030727e6a615722718b47510f4bed72df4c949f95ba9f5aaf88"},
+]
+py = [
+    {file = "py-1.11.0-py2.py3-none-any.whl", hash = "sha256:607c53218732647dff4acdfcd50cb62615cedf612e72d1724fb1a0cc6405b378"},
+    {file = "py-1.11.0.tar.gz", hash = "sha256:51c75c4126074b472f746a24399ad32f6053d1b34b68d2fa41e558e6f4a98719"},
+]
+py-cpuinfo = [
+    {file = "py-cpuinfo-8.0.0.tar.gz", hash = "sha256:5f269be0e08e33fd959de96b34cd4aeeeacac014dd8305f70eb28d06de2345c5"},
+]
 pycodestyle = []
 pydocstyle = [
     {file = "pydocstyle-6.1.1-py3-none-any.whl", hash = "sha256:6987826d6775056839940041beef5c08cc7e3d71d63149b48e36727f70144dc4"},

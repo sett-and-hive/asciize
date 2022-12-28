@@ -22,11 +22,13 @@
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch", "minor", "digest"],
-      "groupName": "devDependencies (non-major)"
+      "groupName": "devDependencies (non-major)",
+      "automerge": true
     }
   ],
   "pre-commit": {
-    "enabled": true
+    "enabled": true,
+    "automerge": true
   },
   "major": {
     "automerge": false

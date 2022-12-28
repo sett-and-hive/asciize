@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672204162996,
+  "lastUpdate": 1672223581199,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -12560,6 +12560,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 8.415758605985375e-7",
             "extra": "mean: 395.5316565588923 nsec\nrounds: 119048"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "distinct": true,
+          "id": "f721adec3ae51f220b3c43d600960034e4edd2e3",
+          "message": "Update dependency furo to v2022.12.7",
+          "timestamp": "2022-12-28T10:31:55Z",
+          "tree_id": "fe9e6f042db14a3cc3d088e3390fb3df83a6065d",
+          "url": "https://github.com/sett-and-hive/asciize/commit/f721adec3ae51f220b3c43d600960034e4edd2e3"
+        },
+        "date": 1672223579472,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 1089918.2019661602,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000020643397375608878",
+            "extra": "mean: 917.5000455961263 nsec\nrounds: 65790"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 708122.2804183937,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000030690345821988254",
+            "extra": "mean: 1.4121854765100041 usec\nrounds: 35212"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 575137.9817991714,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00000877192866392033",
+            "extra": "mean: 1.7387131986514903 usec\nrounds: 112360"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 2659674.638042722,
+            "unit": "iter/sec",
+            "range": "stddev: 4.0936189225665674e-7",
+            "extra": "mean: 375.9858389053855 nsec\nrounds: 149254"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1766970.281613626,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001132499666909685",
+            "extra": "mean: 565.9404747242149 nsec\nrounds: 113624"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 770939.1547464929,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000027853587896760004",
+            "extra": "mean: 1.2971192263919051 usec\nrounds: 95239"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 728004.1004802315,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00000433400374721979",
+            "extra": "mean: 1.373618636681229 usec\nrounds: 149254"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2386804.2632159046,
+            "unit": "iter/sec",
+            "range": "stddev: 9.98560086763784e-7",
+            "extra": "mean: 418.9702588568127 nsec\nrounds: 136987"
           }
         ]
       }

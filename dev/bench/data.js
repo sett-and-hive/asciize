@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672223581199,
+  "lastUpdate": 1672235548415,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -12640,6 +12640,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 9.98560086763784e-7",
             "extra": "mean: 418.9702588568127 nsec\nrounds: 136987"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "distinct": true,
+          "id": "3d2da73c130582924f78be8393c809222a7c441a",
+          "message": "Update dependency sphinx-click to v4.4.0",
+          "timestamp": "2022-12-28T13:51:37Z",
+          "tree_id": "744687429123bacec4dfa56c687b70bca328ae0b",
+          "url": "https://github.com/sett-and-hive/asciize/commit/3d2da73c130582924f78be8393c809222a7c441a"
+        },
+        "date": 1672235547639,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 1073357.6592595337,
+            "unit": "iter/sec",
+            "range": "stddev: 1.6619245875458973e-7",
+            "extra": "mean: 931.6559036713445 nsec\nrounds: 106383"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 735753.617049995,
+            "unit": "iter/sec",
+            "range": "stddev: 1.9945712296099017e-7",
+            "extra": "mean: 1.3591506406852625 usec\nrounds: 103093"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 612862.597502127,
+            "unit": "iter/sec",
+            "range": "stddev: 5.104917492963801e-7",
+            "extra": "mean: 1.6316871091101774 usec\nrounds: 133334"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 2774496.316777713,
+            "unit": "iter/sec",
+            "range": "stddev: 1.719737440677531e-8",
+            "extra": "mean: 360.4257803307409 nsec\nrounds: 131579"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1814475.773198705,
+            "unit": "iter/sec",
+            "range": "stddev: 6.15643656699188e-8",
+            "extra": "mean: 551.1233683969849 nsec\nrounds: 92593"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 759653.7288170421,
+            "unit": "iter/sec",
+            "range": "stddev: 1.2925404542579232e-7",
+            "extra": "mean: 1.3163892469233753 usec\nrounds: 111112"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 813041.813974713,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4763041863369914e-7",
+            "extra": "mean: 1.2299490417489176 usec\nrounds: 151516"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2741912.63170262,
+            "unit": "iter/sec",
+            "range": "stddev: 1.6003963062759348e-8",
+            "extra": "mean: 364.7089219539816 nsec\nrounds: 133334"
           }
         ]
       }

@@ -27,6 +27,9 @@ characters outside the original 7-bit ASCII set.  Yet, with so much data collect
 [https://a61.asmdc.org/news/20170330-california-jose-goes-accent-mark-e-law]
 
 NNPES blah blah
+
+Convert Unicode strings to nearest US ASCII equivalent by dropping accents, like manual entries into an old ASCII name database would.
+
 ## Features
 
 - TODO
@@ -87,11 +90,7 @@ This project was generated from [@cjolowicz]'s [Hypermodern Python Cookiecutter]
 
 ## olde README
 
-Convert Unicode strings to nearest US ASCII equivalent by dropping accents, like an manual entries into an old ASCII name database would.
-
-
-see
-
+see:
 
 https://stackoverflow.com/questions/517923/what-is-the-best-way-to-remove-accents-normalize-in-a-python-unicode-string
 

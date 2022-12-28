@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672201819041,
+  "lastUpdate": 1672202218615,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -12320,6 +12320,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.712306232620781e-8",
             "extra": "mean: 343.07961887660196 nsec\nrounds: 140846"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "tomwillis608@gmail.com",
+            "name": "Tom Willis",
+            "username": "tomwillis608"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "0e6ec2e0f7933614b9094341b572f699eec1e4a1",
+          "message": "Merge pull request #272 from sett-and-hive/renovate/ossf-scorecard-action-2.x\n\nUpdate ossf/scorecard-action action to v2.1.2",
+          "timestamp": "2022-12-27T22:36:02-06:00",
+          "tree_id": "8e6d477df347c04fb048036cb79b6ec1ecaab326",
+          "url": "https://github.com/sett-and-hive/asciize/commit/0e6ec2e0f7933614b9094341b572f699eec1e4a1"
+        },
+        "date": 1672202217240,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 1085508.0034290159,
+            "unit": "iter/sec",
+            "range": "stddev: 4.6478198745961275e-7",
+            "extra": "mean: 921.2276619251961 nsec\nrounds: 109891"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 714962.4637289416,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4056473471425162e-7",
+            "extra": "mean: 1.398674826625755 usec\nrounds: 98040"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 603178.5211097499,
+            "unit": "iter/sec",
+            "range": "stddev: 5.519820770507099e-7",
+            "extra": "mean: 1.657883968016904 usec\nrounds: 125000"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 2740518.453165571,
+            "unit": "iter/sec",
+            "range": "stddev: 3.758419894214624e-8",
+            "extra": "mean: 364.8944596031158 nsec\nrounds: 131579"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1866021.9869948598,
+            "unit": "iter/sec",
+            "range": "stddev: 9.586173529510937e-8",
+            "extra": "mean: 535.8993661218145 nsec\nrounds: 94340"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 751549.2542908088,
+            "unit": "iter/sec",
+            "range": "stddev: 1.2402444496314147e-7",
+            "extra": "mean: 1.3305847810914788 usec\nrounds: 112360"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 799156.4357259802,
+            "unit": "iter/sec",
+            "range": "stddev: 1.6249800779793932e-7",
+            "extra": "mean: 1.251319460490319 usec\nrounds: 169492"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2680288.184945543,
+            "unit": "iter/sec",
+            "range": "stddev: 1.529681479200088e-8",
+            "extra": "mean: 373.09420890523694 nsec\nrounds: 133334"
           }
         ]
       }

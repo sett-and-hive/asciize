@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1672832404166,
+  "lastUpdate": 1674016562938,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -13040,6 +13040,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.625971671843911e-8",
             "extra": "mean: 363.9370933213581 nsec\nrounds: 64517"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "tomwillis608@gmail.com",
+            "name": "Tom Willis",
+            "username": "tomwillis608"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "6252bf43e1516d50b71295b06e9f4caf10186dd2",
+          "message": "Migrate away from docker (#300)\n\n* Migrate away from docker\r\n* scan when there is a baseline\r\n* add fake secret to test action\r\n* add diff to break the build\r\n* remove test file. detect-secret workflow should pass now\r\n* cleanup workflow",
+          "timestamp": "2023-01-17T22:35:05-06:00",
+          "tree_id": "57183a84435e9b86452743f5e151aba4c60359a4",
+          "url": "https://github.com/sett-and-hive/asciize/commit/6252bf43e1516d50b71295b06e9f4caf10186dd2"
+        },
+        "date": 1674016561181,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 1021491.3842756938,
+            "unit": "iter/sec",
+            "range": "stddev: 1.3380810637355616e-7",
+            "extra": "mean: 978.960777734868 nsec\nrounds: 89286"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 741987.1155829031,
+            "unit": "iter/sec",
+            "range": "stddev: 1.4763844279121e-7",
+            "extra": "mean: 1.3477322975000754 usec\nrounds: 106383"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 613499.0005631532,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000001114274073010787",
+            "extra": "mean: 1.6299945054222802 usec\nrounds: 120482"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 2755393.768779857,
+            "unit": "iter/sec",
+            "range": "stddev: 1.7974428228015926e-8",
+            "extra": "mean: 362.9245341737856 nsec\nrounds: 135136"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1911074.7222939227,
+            "unit": "iter/sec",
+            "range": "stddev: 2.543653933402758e-8",
+            "extra": "mean: 523.2657772793391 nsec\nrounds: 78125"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 773122.1835024141,
+            "unit": "iter/sec",
+            "range": "stddev: 1.2321764794098913e-7",
+            "extra": "mean: 1.2934566118252864 usec\nrounds: 113637"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 791875.735096112,
+            "unit": "iter/sec",
+            "range": "stddev: 4.5496706173866586e-7",
+            "extra": "mean: 1.26282439994026 usec\nrounds: 163935"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2745476.049394552,
+            "unit": "iter/sec",
+            "range": "stddev: 1.6021436464302038e-8",
+            "extra": "mean: 364.2355576989558 nsec\nrounds: 133334"
           }
         ]
       }

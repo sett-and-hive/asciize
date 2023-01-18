@@ -132,3 +132,4 @@ discovery.txt
 # Benchmarking with pytest-benchmark
 benchmark-output.json
 bin/act
+.secrets.new

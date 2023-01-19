@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1674115248428,
+  "lastUpdate": 1674127503772,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -13760,6 +13760,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 6.587900770441235e-8",
             "extra": "mean: 360.82680632975536 nsec\nrounds: 131579"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "distinct": true,
+          "id": "d995fca82529c08b8b63750e0741c972f5d43c44",
+          "message": "Update github/codeql-action action to v2.1.39",
+          "timestamp": "2023-01-19T11:23:50Z",
+          "tree_id": "89248bf419958e6fd0555961b1a24b147ef8cdde",
+          "url": "https://github.com/sett-and-hive/asciize/commit/d995fca82529c08b8b63750e0741c972f5d43c44"
+        },
+        "date": 1674127502603,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 1047094.2833730973,
+            "unit": "iter/sec",
+            "range": "stddev: 1.3340020393200773e-7",
+            "extra": "mean: 955.0238368016026 nsec\nrounds: 96154"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 712244.7991957399,
+            "unit": "iter/sec",
+            "range": "stddev: 1.1884462191211491e-7",
+            "extra": "mean: 1.4040116560053375 usec\nrounds: 106383"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 611593.34585509,
+            "unit": "iter/sec",
+            "range": "stddev: 1.3533162250530935e-7",
+            "extra": "mean: 1.6350733813198461 usec\nrounds: 121952"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 2757550.360411758,
+            "unit": "iter/sec",
+            "range": "stddev: 1.707848048812404e-8",
+            "extra": "mean: 362.6407025441411 nsec\nrounds: 131579"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1823822.5166484967,
+            "unit": "iter/sec",
+            "range": "stddev: 5.756382871805101e-8",
+            "extra": "mean: 548.2989659749145 nsec\nrounds: 94340"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 756270.6284132352,
+            "unit": "iter/sec",
+            "range": "stddev: 1.2886797750362439e-7",
+            "extra": "mean: 1.3222779814920806 usec\nrounds: 112360"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 799362.1137647196,
+            "unit": "iter/sec",
+            "range": "stddev: 1.1363626584622e-7",
+            "extra": "mean: 1.2509974926011258 usec\nrounds: 158731"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2732490.943166531,
+            "unit": "iter/sec",
+            "range": "stddev: 1.779615353003313e-8",
+            "extra": "mean: 365.966446293526 nsec\nrounds: 133334"
           }
         ]
       }

@@ -1,6 +1,12 @@
 # .github/workflows/tests.yml
 name: Tests
-on: push
+
+on:
+  push:
+    branches:
+      - '*'
+      - '!gh-pages'
+      # Run on all branches except gh-pages
 
 permissions:
   contents: read

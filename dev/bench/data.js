@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1674964961356,
+  "lastUpdate": 1675024936296,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -14800,6 +14800,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 5.367520835444366e-7",
             "extra": "mean: 367.02821972065783 nsec\nrounds: 135136"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "tomwillis608@gmail.com",
+            "name": "Tom Willis",
+            "username": "tomwillis608"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "951a9103e6c9908f457ea53b5fbfe4bb7c5f14bc",
+          "message": "Merge pull request #312 from sett-and-hive/bug/fix-tests-workflow-on-gh-pages\n\nDo not run tests workflow on gh-pages branch",
+          "timestamp": "2023-01-29T14:41:19-06:00",
+          "tree_id": "34d1be359e4c169bef2639200d6937c969a6955a",
+          "url": "https://github.com/sett-and-hive/asciize/commit/951a9103e6c9908f457ea53b5fbfe4bb7c5f14bc"
+        },
+        "date": 1675024935133,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 940832.2318939969,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00002542439136733467",
+            "extra": "mean: 1.0628887554021103 usec\nrounds: 75752"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 727998.3045887905,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00002123001668599091",
+            "extra": "mean: 1.3736295726194714 usec\nrounds: 98030"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 671246.4090764065,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000011173220284668146",
+            "extra": "mean: 1.4897658840006878 usec\nrounds: 114943"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 2902025.376595457,
+            "unit": "iter/sec",
+            "range": "stddev: 1.0659408832820627e-7",
+            "extra": "mean: 344.58692472663483 nsec\nrounds: 140846"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1974537.1112247931,
+            "unit": "iter/sec",
+            "range": "stddev: 2.142828224097031e-7",
+            "extra": "mean: 506.4478121556022 nsec\nrounds: 102041"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 691224.2013202017,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00003451442891731561",
+            "extra": "mean: 1.4467086049505398 usec\nrounds: 119048"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 860842.0297168976,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000003822906690028524",
+            "extra": "mean: 1.1616533178902368 usec\nrounds: 153847"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2868776.941490088,
+            "unit": "iter/sec",
+            "range": "stddev: 4.4257558405996004e-8",
+            "extra": "mean: 348.5806043466016 nsec\nrounds: 140846"
           }
         ]
       }

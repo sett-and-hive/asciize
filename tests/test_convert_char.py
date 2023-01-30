@@ -106,6 +106,7 @@ def test_char_converson() -> None:
         # consonants
         ["ç", "c"],
         ["č", "c"],
+        ["đ", "d"],
         ["ģ", "g"],
         ["ğ", "g"],
         ["ķ", "k"],
@@ -119,6 +120,7 @@ def test_char_converson() -> None:
         ["ŕ", "r"],
         ["š", "s"],
         ["ť", "t"],
+        ["ŧ", "t"],
         ["ŵ", "w"],
         ["ẅ", "w"],
         ["ẃ", "w"],
@@ -129,6 +131,7 @@ def test_char_converson() -> None:
         ["ß", "ss"],
         ["ẞ", "SS"],
         ["æ", "ae"],
+        ["ǽ", "ae"],
         [" ", " "],
         # Synthetic Czech/Norweian/Polish name
         ["Øldřichß, Špłačæk", "Oldrichss, Splacaek"],

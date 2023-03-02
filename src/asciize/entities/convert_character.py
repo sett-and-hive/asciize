@@ -2,6 +2,7 @@
 import unicodedata
 from time import sleep
 
+
 def remove_accents(input_str: str) -> str:
     """Remove accents from unicode string, return unicode string.
     sleep(2/1000)

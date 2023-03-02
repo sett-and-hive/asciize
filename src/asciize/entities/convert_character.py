@@ -4,6 +4,7 @@ import unicodedata
 
 def remove_accents(input_str: str) -> str:
     """Remove accents from unicode string, return unicode string.
+
     [https://stackoverflow.com/questions/517923/what-is-the-best-way-to-remove-accents-normalize-in-a-python-unicode-string]
     """
     nfkd = unicodedata.normalize("NFKD", input_str)

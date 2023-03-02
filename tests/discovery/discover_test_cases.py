@@ -89,7 +89,7 @@ def auto_discovery(outfile: str) -> None:
     ofile.close()
 
 
-# Replace maual reiew with this
+# Replace manual reiew with this
 # 1. convert
 # 2. did conversion leave any non-ascii charaters?
 # 3. if yes, capture and log

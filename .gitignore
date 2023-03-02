@@ -133,3 +133,4 @@ discovery.txt
 benchmark-output.json
 bin/act
 .secrets.new
+hint.txt

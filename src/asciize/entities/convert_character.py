@@ -1,11 +1,10 @@
 """Domain entity for coversion of unicode into base ASCII Latin characters."""
 import unicodedata
-from time import sleep
 
 
 def remove_accents(input_str: str) -> str:
     """Remove accents from unicode string, return unicode string.
-    sleep(2/1000)
+
     [https://stackoverflow.com/questions/517923/what-is-the-best-way-to-remove-accents-normalize-in-a-python-unicode-string]
     """
     nfkd = unicodedata.normalize("NFKD", input_str)

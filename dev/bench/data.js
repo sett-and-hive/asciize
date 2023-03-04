@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1677807401307,
+  "lastUpdate": 1677936871198,
   "repoUrl": "https://github.com/sett-and-hive/asciize",
   "entries": {
     "Pytest-Benchmark Benchmark": [
@@ -16720,6 +16720,86 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 1.1077641540147482e-7",
             "extra": "mean: 369.01051794908665 nsec\nrounds: 133334"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "committer": {
+            "email": "29139614+renovate[bot]@users.noreply.github.com",
+            "name": "renovate[bot]",
+            "username": "renovate[bot]"
+          },
+          "distinct": true,
+          "id": "cf227b0c27a228719b4f2c61fad3f16e1d3e8daf",
+          "message": "Update pre-commit hook pre-commit/mirrors-autopep8 to v2.0.2",
+          "timestamp": "2023-03-04T13:33:23Z",
+          "tree_id": "81b5a79e366c12a8d5b6efc0f3702f749663398e",
+          "url": "https://github.com/sett-and-hive/asciize/commit/cf227b0c27a228719b4f2c61fad3f16e1d3e8daf"
+        },
+        "date": 1677936869771,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents",
+            "value": 926271.056338312,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000016963298556162003",
+            "extra": "mean: 1.0795975898816805 usec\nrounds: 76924"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins",
+            "value": 604523.3247642785,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000007598262219222484",
+            "extra": "mean: 1.6541958912667756 usec\nrounds: 84746"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins",
+            "value": 500999.2499167943,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000017132497296740243",
+            "extra": "mean: 1.9960109724038098 usec\nrounds: 105264"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove",
+            "value": 2182476.7134780297,
+            "unit": "iter/sec",
+            "range": "stddev: 4.859843944281921e-7",
+            "extra": "mean: 458.19503769485317 nsec\nrounds: 112347"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_remove_accents_noop",
+            "value": 1213493.384155556,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000011408292189812255",
+            "extra": "mean: 824.0671214667383 nsec\nrounds: 192308"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_single_latins_noop",
+            "value": 625123.3421584768,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000034406101310721017",
+            "extra": "mean: 1.599684306375632 usec\nrounds: 86207"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_convert_multiple_latins_noop",
+            "value": 681559.1004172075,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002629862624143159",
+            "extra": "mean: 1.4672241913986084 usec\nrounds: 123457"
+          },
+          {
+            "name": "tests/test_convert_char.py::test_direct_remove_noop",
+            "value": 2219171.482737222,
+            "unit": "iter/sec",
+            "range": "stddev: 2.9724985536559334e-7",
+            "extra": "mean: 450.6186240129725 nsec\nrounds: 116280"
           }
         ]
       }

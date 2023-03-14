@@ -49,7 +49,7 @@ jobs:
         run: nox -s benchmark
 
       - name: Store benchmark result in github.io
-        uses: benchmark-action/github-action-benchmark@c3efd4d54319dbc90622069cc273cba59b46abbf # tag=v1
+        uses: benchmark-action/github-action-benchmark@5bbce78ef18edf5b96cb2d23e8d240b485f9dc4a # tag=v1
         with:
           name: Pytest-Benchmark Benchmark
           tool: 'pytest'

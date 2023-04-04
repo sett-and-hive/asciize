@@ -65,7 +65,7 @@ repos:
         args: [--py37-plus]
 
 -   repo: https://github.com/rhysd/actionlint
-    rev: v1.6.23
+    rev: v1.6.24
     hooks:
       - id: actionlint-docker
 

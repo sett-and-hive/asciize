@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@8e0b4153524c217e5dce81df0986478e95a7004a # tav=v1.4
+        uses: step-security/harden-runner@910b3276b25495e4cfd8669cf5d7ea16508b0241 # tav=v1.4
         with:
           egress-policy: audit
           disable-telemetry: false
@@ -30,7 +30,7 @@ jobs:
             api.github.com:443
 
       - name: Checkout main branch
-        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # v3
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3
         with:
           clean: true
 

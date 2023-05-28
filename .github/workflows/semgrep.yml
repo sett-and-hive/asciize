@@ -58,3 +58,4 @@ jobs:
             p/owasp-top-ten
             p/r2c-security-audit
             p/insecure-transport
+            p/github-actions

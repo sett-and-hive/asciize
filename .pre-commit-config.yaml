@@ -94,6 +94,12 @@ repos:
     hooks:
     -   id: check-pre-commit-ci-config
 
+  # Scan for secrets
+-   repo: https://github.com/zricethezav/gitleaks
+    rev: v8.17.0
+    hooks:
+      - id: gitleaks-docker
+
 # GitHub CI with pre-commit.ci
 ci:
     autofix_commit_msg: |
@@ -103,5 +109,5 @@ ci:
     autofix_prs: true
     autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
     autoupdate_schedule: weekly
-    skip: [ actionlint-docker ]
+    skip: [ actionlint-docker, gitleaks-docker ]
     submodules: false

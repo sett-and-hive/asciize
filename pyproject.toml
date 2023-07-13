@@ -20,7 +20,7 @@ python = "^3.8.1"
 click = ">=8.0.1"
 
 [tool.poetry.dev-dependencies]
-Pygments = ">=2.15.0"
+Pygments = ">=2.13.0"
 black = ">=22.12.0"
 coverage = {extras = ["toml"], version = ">=7.0.1"}
 darglint = ">=1.8.1"

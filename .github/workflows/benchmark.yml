@@ -30,7 +30,7 @@ jobs:
             api.github.com:443
 
       - name: Checkout main branch
-        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v3
         with:
           clean: true
 

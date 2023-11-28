@@ -34,6 +34,7 @@ jobs:
             codeload.github.com:443
             github.com:443
             pipelines.actions.githubusercontent.com:443
+            oss-fuzz-build-logs.storage.googleapis.com:443
 
       - name: "Checkout code"
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1

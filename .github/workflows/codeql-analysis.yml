@@ -53,6 +53,8 @@ jobs:
           github.com:443
           pypi.org:443
           objects.githubusercontent.com:443
+          pipelinesghubeus25.actions.githubusercontent.com:443
+          uploads.github.com:443
 
     - name: Checkout repository
       uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4

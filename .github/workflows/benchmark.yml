@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@ea8b747819ff6d82907eb4018229f1a75c174697 # tav=v1.4
+        uses: step-security/harden-runner@dece11172ed6b762b5421b294513d628edad7f7d # tav=v1.4
         with:
           egress-policy: audit
           disable-telemetry: false
@@ -35,7 +35,7 @@ jobs:
           clean: true
 
       - name: Setup Python
-        uses: actions/setup-python@65d7f2d534ac1bc67fcd62888c5f4f3d2cb2b236 # v4
+        uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5
         with:
           python-version: "3.9"
 

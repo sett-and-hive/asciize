@@ -1,4 +1,5 @@
 """Sphinx configuration."""
+
 project = "Asciize"
 author = "Tom Willis"
 copyright = "2022, Tom Willis"

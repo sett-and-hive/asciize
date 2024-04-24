@@ -48,6 +48,8 @@ jobs:
           actions-results-receiver-production.githubapp.com:443
           api.github.com:443
           productionresultssa4.blob.core.windows.net:443
+          results-receiver.actions.githubusercontent.com:443
+          cli.codecov.io:443
 
     - name: "Checkout"
       uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
@@ -55,7 +57,7 @@ jobs:
         clean: true
 
     - name: "Python setup"
-      uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1 # v4
+      uses: actions/setup-python@0a5c61591373683505ea898e09a3ea4f39ef2b9c # v5
       with:
         python-version: ${{ matrix.python-version }}
         architecture: x64
@@ -68,7 +70,7 @@ jobs:
 
     - name: "Post to codecov.io"
       if: "contains(env.USING_COVERAGE, matrix.python-version)"
-      uses: codecov/codecov-action@eaaf4bedf32dbdc6b720b63067d99c4d77d6047d # v3
+      uses: codecov/codecov-action@ab904c41d6ece82784817410c45d8b8c02684457 # v3
       with:
         verbose: true
         token: ${{ secrets.CODECOV_TOKEN }}

@@ -1,4 +1,5 @@
 """Test cases for the __main__ module."""
+
 import pytest
 from asciize import __main__
 from click.testing import CliRunner

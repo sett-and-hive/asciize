@@ -4,7 +4,6 @@ Using pytest-benchmark fixture https://pypi.org/project/pytest-benchmark/
 
 Typing the `benchmark` fixture as `Any` for convienience.
 """
-
 from typing import Any
 
 from asciize.entities.convert_character import character_conversion

@@ -8,7 +8,6 @@ but it is GPL2 and is based on mapping tables
 A reference Latin character mapping:
 <https://docs.oracle.com/cd/E29584_01/webhelp/mdex_basicDev/src/rbdv_chars_mapping.html>
 """
-
 import unicodedata
 from typing import List
 

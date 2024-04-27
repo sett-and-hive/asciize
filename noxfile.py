@@ -119,14 +119,8 @@ def precommit(session: Session) -> None:
         "--show-diff-on-failure",
     ]
     session.install(
-        "black",
         "darglint",
-        "flake8",
-        "flake8-bandit",
-        "flake8-bugbear",
-        "flake8-docstrings",
-        "flake8-rst-docstrings",
-        "reorder-python-imports",
+        "ruff",
         "pep8-naming",
         "pre-commit",
         "pre-commit-hooks",

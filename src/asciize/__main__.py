@@ -1,7 +1,9 @@
 """Command-line interface."""
+
 from typing import Any
 
 import click
+
 from asciize.entities.convert_character import character_conversion
 
 

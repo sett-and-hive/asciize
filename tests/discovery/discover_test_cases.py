@@ -4,6 +4,7 @@ Visually test asciize to discover missing test cases.
 
 This is an exploratory testing tool.
 """
+
 from asciize.entities.convert_character import character_conversion
 from faker import Faker
 

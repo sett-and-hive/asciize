@@ -4,13 +4,16 @@ Using pytest-benchmark fixture https://pypi.org/project/pytest-benchmark/
 
 Typing the `benchmark` fixture as `Any` for convienience.
 """
+
 from typing import Any
 
-from asciize.entities.convert_character import character_conversion
-from asciize.entities.convert_character import convert_multiple_latins
-from asciize.entities.convert_character import convert_single_latins
-from asciize.entities.convert_character import direct_remove
-from asciize.entities.convert_character import remove_accents
+from asciize.entities.convert_character import (
+    character_conversion,
+    convert_multiple_latins,
+    convert_single_latins,
+    direct_remove,
+    remove_accents,
+)
 
 
 def test_char_converson() -> None:

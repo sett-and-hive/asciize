@@ -46,14 +46,18 @@ jobs:
           pipelinesghubeus25.actions.githubusercontent.com:443
           docker.io:443
           actions-results-receiver-production.githubapp.com:443
+          api.github.com:443
+          productionresultssa4.blob.core.windows.net:443
+          results-receiver.actions.githubusercontent.com:443
+          cli.codecov.io:443
 
     - name: "Checkout"
-      uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3
+      uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
       with:
         clean: true
 
     - name: "Python setup"
-      uses: actions/setup-python@61a6322f88396a6271a6ee3565807d608ecaddd1 # v4
+      uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5
       with:
         python-version: ${{ matrix.python-version }}
         architecture: x64
@@ -66,7 +70,7 @@ jobs:
 
     - name: "Post to codecov.io"
       if: "contains(env.USING_COVERAGE, matrix.python-version)"
-      uses: codecov/codecov-action@eaaf4bedf32dbdc6b720b63067d99c4d77d6047d # v3
+      uses: codecov/codecov-action@125fc84a9a348dbcf27191600683ec096ec9021c # v4
       with:
         verbose: true
         token: ${{ secrets.CODECOV_TOKEN }}

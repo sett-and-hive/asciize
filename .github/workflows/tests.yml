@@ -45,6 +45,7 @@ jobs:
           productionresultssa1.blob.core.windows.net:443
           pipelinesghubeus25.actions.githubusercontent.com:443
           docker.io:443
+          actions-results-receiver-production.githubapp.com:443
 
     - name: "Checkout"
       uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3

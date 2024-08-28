@@ -52,12 +52,12 @@ jobs:
           cli.codecov.io:443
 
     - name: "Checkout"
-      uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+      uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
       with:
         clean: true
 
     - name: "Python setup"
-      uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5
+      uses: actions/setup-python@39cd14951b08e74b54015e9e001cdefcf80e669f # v5
       with:
         python-version: ${{ matrix.python-version }}
         architecture: x64
@@ -70,7 +70,7 @@ jobs:
 
     - name: "Post to codecov.io"
       if: "contains(env.USING_COVERAGE, matrix.python-version)"
-      uses: codecov/codecov-action@125fc84a9a348dbcf27191600683ec096ec9021c # v4
+      uses: codecov/codecov-action@e28ff129e5465c2c0dcc6f003fc735cb6ae0c673 # v4
       with:
         verbose: true
         token: ${{ secrets.CODECOV_TOKEN }}

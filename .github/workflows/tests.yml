@@ -27,7 +27,7 @@ jobs:
         python-version: ["3.8", "3.9", "3.10"]
     steps:
     - name: Harden Runner
-      uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813 # tag=v1.4
+      uses: step-security/harden-runner@0080882f6c36860b6ba35c610c98ce87d4e2f26f # tag=v1.4
       with:
         egress-policy: block
         allowed-endpoints: >

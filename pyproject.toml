@@ -16,7 +16,7 @@ classifiers = [
 Changelog = "https://github.com/sett.and.hive/asciize/releases"
 
 [tool.poetry.dependencies]
-python = "^3.8.1"
+python = "^3.10.1"
 click = ">=8.0.1"
 tornado = "6.4.2"
 

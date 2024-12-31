@@ -24,7 +24,7 @@ jobs:
       USING_COVERAGE: '3.10'
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10"]
+        python-version: ["3.10"]
     steps:
     - name: Harden Runner
       uses: step-security/harden-runner@248ae51c2e8cc9622ecf50685c8bf7150c6e8813 # tag=v1.4
@@ -62,8 +62,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
         architecture: x64
 
-    - run: pip install nox==2022.11.21
-    - run: pip install poetry==1.3.1
+    - run: pip install nox==2024.4.15
+    - run: pip install poetry==1.8.3
     - run: pip install nox-poetry==1.0.2
 
     - run: nox -p ${{ matrix.python-version }}

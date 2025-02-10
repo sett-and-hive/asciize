@@ -24,6 +24,10 @@
       "matchUpdateTypes": ["patch", "minor", "digest"],
       "groupName": "devDependencies (non-major)",
       "automerge": true
+    },
+    {
+      "matchPackageNames": ["zricethezav/gitleaks"],
+      "allowedVersions": "<=8.21.2"
     }
   ],
   "pre-commit": {

@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
+These versions of your project are
 currently being supported with security updates.
 
 | Version | Supported          |
@@ -11,4 +11,7 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-Please raise an issue and we'll triage it as soon as we can.
+Please raise an [issue](https://github.com/sett-and-hive/asciize/issues) and we'll triage it within 30 days.
+
+This is a sleepy low risk repostitory but we will disclose any serious security issues as they arise.
+ 

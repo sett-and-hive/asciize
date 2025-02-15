@@ -13,4 +13,4 @@ currently being supported with security updates.
 
 Please raise an [issue](https://github.com/sett-and-hive/asciize/issues) and we'll triage it within 30 days.
 
-This is a sleepy low risk repostitory but we will disclose any serious security issues as they arise.
+This is a sleepy low risk repository but we will disclose any serious security issues as they arise.

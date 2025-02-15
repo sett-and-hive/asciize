@@ -1,11 +1,11 @@
 name: Scorecards supply-chain security
 on:
   # Only the default branch is supported.
-  branch_protection_rule:
   schedule:
     - cron: '18 18 * * 5'
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 # Declare default permissions as read only.
 permissions: read-all
@@ -19,14 +19,16 @@ jobs:
       security-events: write
       actions: read
       contents: read
+      # Needed for GitHub OIDC token if publish_results is true
+      id-token: write
 
     steps:
 
       - name: Harden Runner
         uses: step-security/harden-runner@cb605e52c26070c328afc4562f0b4ada7618a84e # v2.10.4
         with:
-          egress-policy: block
-          disable-telemetry: true
+          egress-policy: audit
+          disable-telemetry: false
           allowed-endpoints: >
             api.github.com:443
             api.osv.dev:443
@@ -48,7 +50,7 @@ jobs:
           results_format: sarif
           # Read-only PAT token. To create it,
           # follow the steps in https://github.com/ossf/scorecard-action#pat-token-creation.
-          repo_token: ${{ secrets.SCORECARD_READ_TOKEN }}
+#          repo_token: ${{ secrets.SCORECARD_READ_TOKEN }}
           # Publish the results to enable scorecard badges. For more details, see
           # https://github.com/ossf/scorecard-action#publishing-results.
           # For private repositories, `publish_results` will automatically be set to `false`,

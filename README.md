@@ -11,6 +11,7 @@
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/sett.and.hive/asciize/badge)](https://scorecard.dev/viewer/?uri=github.com/sett.and.hive/asciize)
 
 [pypi_]: https://pypi.org/project/asciize/
 [status]: https://pypi.org/project/asciize/

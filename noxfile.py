@@ -131,31 +131,32 @@ def precommit(session: Session) -> None:
         activate_virtualenv_in_precommit_hooks(session)
 
 
-# Safety is broken. See issue# 875
+def setup_poetry(session):
+    session.install("poetry", "pip", "pip-audit")
+    session.run("poetry", "install")
+    session.run("poetry", "--version")
+    session.run("poetry", "self", "add", "poetry-plugin-export@1.9.0")
+
+
+def export_requirements(session, filename="requirements.txt"):
+    session.run(
+        "poetry", "export", "-f", filename, "--without-hashes", "--output", filename
+    )
+    return filename
+
+
+# Safety is broken. Replace with pip-audit. See issue #875.
 @nox.session(name="pip-audit", python=python_versions[0])
 def pip_audit(session) -> None:
-    """Scan production dependencies for insecure packages."""
-    REQUIREMENTS_TXT = "requirements.txt"
-    session.install("poetry", "pip", "pip-audit")
-    # Ensure dependencies are installed
-    session.run("poetry", "install")
-    # Print Poetry version to verify
-    session.run("poetry", "--version")
-    # Install the Poetry export plugin
-    session.run("poetry", "self", "add", "poetry-plugin-export")
-    # Export dependencies to requirements.txt
-    session.run(
-        "poetry",
-        "export",
-        "-f",
-        REQUIREMENTS_TXT,
-        "--without-hashes",
-        "--output",
-        REQUIREMENTS_TXT,
-    )
+    # """Scan production dependencies for insecure packages."""
+    session.install("pip", "pip-audit")
+    setup_poetry(session)
+    req_file = export_requirements(session)
     # Run pip-audit to detect insecure packages
-    session.run("pip-audit", "-r", REQUIREMENTS_TXT)
-    session.run("rm", "requirements.txt", external=True)
+    session.run("pip-audit", "-r", req_file, "-v")
+    # Clean up the requirements.txt file
+    if os.path.exists(req_file):
+        os.remove(req_file)
 
 
 @session(python=python_versions)

@@ -9,6 +9,7 @@
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/10027/badge)](https://www.bestpractices.dev/projects/10027)
 
+
 [pypi_]: https://pypi.org/project/asciize/
 [status]: https://pypi.org/project/asciize/
 [python version]: https://pypi.org/project/asciize

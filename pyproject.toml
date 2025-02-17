@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "asciize"
-version = "0.0.1"
+version = "0.0.2"
 description = "Asciize"
 authors = ["Tom Willis <sett.and.hive+asciize@gmail.com>"]
 license = "Apache-2.0"
@@ -32,7 +32,6 @@ pre-commit = ">=2.21.0"
 pre-commit-hooks = ">=4.4.0"
 pytest = ">=7.2.0"
 pyupgrade = ">=3.3.1"
-safety = ">=2.3.5"
 sphinx = ">=4.3.2"
 sphinx-autobuild = ">=2021.3.14"
 sphinx-click = ">=3.0.2"
@@ -112,8 +111,8 @@ exclude = [
 line-length = 88
 indent-width = 4
 
-# Assume Python 3.8
-target-version = "py38"
+# Assume Python 3.10
+target-version = "py310"
 
 [tool.ruff.lint]
 # Enable Pyflakes (`F`)

@@ -22,8 +22,8 @@ except ImportError:
 
 
 package = "asciize"
-python_versions = ["3.10"]
-nox.needs_version = ">= 2021.6.6"
+python_versions = ["3.10", "3.11", "3.12"]
+nox.needs_version = ">= 2024.4.15"
 nox.options.sessions = (
     "pre-commit",
     "pip-audit",

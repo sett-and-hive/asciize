@@ -1,9 +1,5 @@
 # Asciize
 
-[![PyPI](https://img.shields.io/pypi/v/asciize.svg)][pypi_]
-[![Status](https://img.shields.io/pypi/status/asciize.svg)][status]
-[![Python Version](https://img.shields.io/pypi/pyversions/asciize)][python version]
-[![License](https://img.shields.io/pypi/l/asciize)][license]
 
 [![Read the documentation at https://asciize.readthedocs.io/](https://img.shields.io/readthedocs/asciize/latest.svg?label=Read%20the%20Docs)][read the docs]
 [![Tests](https://github.com/sett.and.hive/asciize/workflows/Tests/badge.svg)][tests]
@@ -11,6 +7,8 @@
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/10027/badge)](https://www.bestpractices.dev/projects/10027)
+
 
 [pypi_]: https://pypi.org/project/asciize/
 [status]: https://pypi.org/project/asciize/

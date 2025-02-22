@@ -26,7 +26,7 @@ python_versions = ["3.10", "3.11", "3.12"]
 nox.needs_version = ">= 2024.4.15"
 nox.options.sessions = (
     "pre-commit",
-    "safety",
+    "pip-audit",
     "mypy",
     "tests",
     "typeguard",
@@ -131,12 +131,32 @@ def precommit(session: Session) -> None:
         activate_virtualenv_in_precommit_hooks(session)
 
 
-@session(python=python_versions[0])
-def safety(session: Session) -> None:
-    """Scan dependencies for insecure packages."""
-    requirements = session.poetry.export_requirements()
-    session.install("safety")
-    session.run("safety", "check", "--full-report", f"--file={requirements}")
+def setup_poetry(session):
+    session.install("poetry", "pip", "pip-audit")
+    session.run("poetry", "install")
+    session.run("poetry", "--version")
+    session.run("poetry", "self", "add", "poetry-plugin-export@1.9.0")
+
+
+def export_requirements(session, filename="requirements.txt"):
+    session.run(
+        "poetry", "export", "-f", filename, "--without-hashes", "--output", filename
+    )
+    return filename
+
+
+# Safety is broken. Replace with pip-audit. See issue #875.
+@nox.session(name="pip-audit", python=python_versions[0])
+def pip_audit(session) -> None:
+    # """Scan production dependencies for insecure packages."""
+    session.install("pip", "pip-audit")
+    setup_poetry(session)
+    req_file = export_requirements(session)
+    # Run pip-audit to detect insecure packages
+    session.run("pip-audit", "-r", req_file, "-v")
+    # Clean up the requirements.txt file
+    if os.path.exists(req_file):
+        os.remove(req_file)
 
 
 @session(python=python_versions)

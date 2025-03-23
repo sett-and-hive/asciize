@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@a22641e386edd6104ead99416bac876f4d9b806d # tav=v1.4
+        uses: step-security/harden-runner@b131ca5ebfca4930fe6d4a3e82d1e386b4873c94 # tav=v1.4
         with:
           egress-policy: audit
           disable-telemetry: false
@@ -37,7 +37,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5
         with:
-          python-version: "3.10"
+          python-version: "3.13"
 
       - name: "Install dev dependencies"
         run: |

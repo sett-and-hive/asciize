@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@b131ca5ebfca4930fe6d4a3e82d1e386b4873c94 # tav=v1.4
+        uses: step-security/harden-runner@c6295a65d1254861815972266d5933fd6e532bdf # tav=v1.4
         with:
           egress-policy: audit
           disable-telemetry: false

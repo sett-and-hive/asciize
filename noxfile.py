@@ -26,7 +26,7 @@ python_versions = ["3.10", "3.11", "3.12"]
 nox.needs_version = ">= 2024.4.15"
 nox.options.sessions = (
     "pre-commit",
-    "safety",
+    "pip-audit",
     "mypy",
     "tests",
     "typeguard",
@@ -131,12 +131,12 @@ def precommit(session: Session) -> None:
         activate_virtualenv_in_precommit_hooks(session)
 
 
-@session(python=python_versions[0])
-def safety(session: Session) -> None:
+@session(name="pip-audit", python=python_versions[0])
+def pip_audit(session: Session) -> None:
     """Scan dependencies for insecure packages."""
     requirements = session.poetry.export_requirements()
-    session.install("safety")
-    session.run("safety", "check", "--full-report", f"--file={requirements}")
+    session.install("pip-audit")
+    session.run("pip-audit", "--requirement", str(requirements))
 
 
 @session(python=python_versions)
